@@ -2,166 +2,29 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> LazyByte Digital Studio </title>
+    <title>LazyByte Studios</title>
+    <link rel="manifest" href="./manifest.json">
 
-    <!-- favicon -->
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <!-- Instalação do Bootstrap 05 - Framework - Biblioteca de componentes CSS + HTMl + Js -->
+    <link rel="stylesheet" href="./public/vendor/bootstrap-5.0.2-dist/css/bootstrap.min.css" >
 
-    <!-- google font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./public/vendor/bootstrap-5.0.2-dist/js/bootstrap.min.js" defer ></script>
 
-    <!-- ionicon ícones -->
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" defer></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js" defer ></script>
+    <script type="text/javascript" src="./public/vendor/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js" defer ></script>
 
-    <!-- js principal -->
-    <script src="./public/js/script.js" defer></script>
+    <link type="text/css" rel="stylesheet" href="./public/pwa/css/styles_mwarbr.css">
 
-    <!--  css principal -->
-    <link rel="stylesheet" href="./public/css/style.css">
+    <script type="text/javascript" src="./public/pwa/js/scripts.js" defer ></script>
 
-</head>
-<body id="top">
-
-  <!-- #Caixa Busca -->
-  <div class="search-container" data-search-box>
-
-    <div class="input-wrapper">
-      <input type="search" name="search" aria-label="search" placeholder="O que você procura?" class="search-field">
-
-      <button class="search-submit" aria-label="submit search" data-search-toggler>
-        <ion-icon name="search-outline"></ion-icon>
-      </button>
-
-      <button class="search-close" aria-label="close search" data-search-toggler></button>
-    </div>
-
-  </div>
-
-<!-- #Topo -->
-
-  <header class="header">
-
-    <div class="header-top">
-      <div class="container">
-
-        <div class="countdown-text">
-          <b class="status-dot" style="margin-right: 5px;"></b>  Nossa agenda para novos desenvolvimentos está <span class="span skewBg liberado" > Aberta  </span>
-        </div>
-
-        <div class="social-wrapper">
-
-          <p class="social-title"> Siga-nos nas nossas redes: </p>
-
-          <ul class="social-list">
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-facebook"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-twitter"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-pinterest"></ion-icon>
-              </a>
-            </li>
-
-            <li>
-              <a href="#" class="social-link">
-                <ion-icon name="logo-linkedin"></ion-icon>
-              </a>
-            </li>
-
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-    <div class="header-bottom skewBg" data-header>
-      
-      <div class="container">
-
-        <h1><a href="#" class="logo"> LazyByte </a></h1>
-
-        <nav class="navbar" data-navbar>
-          <ul class="navbar-list">
-
-            <li class="navbar-item">
-              <a href="#home" class="navbar-link skewBg" data-nav-link>Home</a>
-            </li>
-
-            
-
-          </ul>
-        </nav>
-
-        <div class="header-actions">
-
-          <button class="search-btn" aria-label="open search" data-search-toggler>
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
-
-          <button class="nav-toggle-btn" aria-label="toggle menu" data-nav-toggler>
-            <ion-icon name="menu-outline" class="menu"></ion-icon>
-            <ion-icon name="close-outline" class="close"></ion-icon>
-          </button>
-
-        </div>
-
-      </div>
-    </div>
-
-  </header>
-
-  <main>
-    <article>
-
-      <!-- 
-        - Destaque
-      -->
-
-      <section class="section hero" id="home" aria-label="home" style="background-image: url('public/imagens/hero-bg.jpg')">
-        
-        <div class="container destaque">
-
-          <div class="hero-content">
-
-            <p class="hero-subtitle">World Gaming</p>
-
-            <h1 class="h1 hero-title">
-              Create <span class="span">Manage</span> Matches
-            </h1>
-
-            <p class="hero-text">
-              Find technology or people for digital projects in public sector and Find an individual specialist develope
-              researcher.
-            </p>
-
-            <button class="btn skewBg">Read More</button>
-
-          </div>
-
-          <figure class="hero-banner img-holder" style="--width: 700; --height: 700;">
-            <img src="https://placehold.co/1920x1080/png" width="700" height="700" alt="hero banner" class="w-100">
-          </figure>
-
-        </div>
-      </section>  
-
-  
+    <script type="module" defer >
+        import { login } from './public/pwa/js/modulos.js';
+    </script>
     
+</head>
+<body>
+    <main id="carrega"></main> 
+    
+    <img src="https://46781.cdn.simplo7.net/static/46781/sku/quadros-por-tema-paisagens-e-natureza-quadro-retangular-paisagem-de-outono-arvores-e-rio--p-1633120224543.jpg" alt="">
 </body>
 </html>

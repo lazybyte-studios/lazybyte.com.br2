@@ -1,0 +1,47 @@
+<section id="login" class=" container-fluid d-flex justify-content-center flex-column " >
+    
+    <figure>
+        <img src="./pwa/imagens/fundo.png" alt="fundo">
+    </figure>
+
+    
+    <section >
+        <figure>
+            <img src="./pwa/imagens/dev.png" alt="logo">
+        </figure>
+
+            <form onsubmit="return false;" action="" method="POST" class="col-10 col-md-4 p-md-5 ms-auto me-auto mt-5 d-block login" id="login" >
+
+                <h2 class="text-center mt-3 mt-md-0 mb-3 mb-md-5 ">LOGIN</h2>
+
+                <!-- mb-3 é uma margin-bottom 3 -->
+                <div class="form-floating mb-4">
+                    <input type="email" class="form-control" id="email" placeholder="Seu melhor e-mail" required >
+                    <label for="email">E-mail </label>
+                </div>
+
+                <div class="form-floating mb-4 senha ">
+                    <input type="password" class="form-control" id="senha" placeholder="Sua senha" required >
+                    <label for="senha">Senha</label>
+                </div>
+
+                <div class="d-flex" >
+                    <a class="col-6 text-center text-decoration-none" href="#">Lembrar-me</a>
+                    <a class="col-6 text-center text-decoration-none " href="#">Esquecia a senha</a>
+                </div>
+
+                <button class="col-10 btn btn-primary mt-4 mb-4 ms-auto me-auto d-block py-3 px-3 " type="submit" name="entrar" id="entrar" >Entrar no Sistema</button>
+
+
+            <p class="text-center col-md-4 mx-md-auto mb-md-5 " > Ou entre com </p>
+
+            <button class="btn btn-dark col-10 col-md-4 mx-auto px-3 py-3 px-md-1 py-md-1 d-block text-light" > <i class="bi bi-google me-2 display-6 "></i> Entrar com o Google</button>
+
+            <button id="envia" class="btn btn-secondary col-10 col-md-4 mx-auto mt-3 px-3 py-3 px-md-1 py-md-1 d-block text-light" > <i class="bi bi-box-arrow-in-right me-2 display-6" ></i> Login Único</button>
+
+        </form>
+
+    </section>
+
+</section>
+
