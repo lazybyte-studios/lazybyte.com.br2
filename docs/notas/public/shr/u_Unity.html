@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Unity</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../vendor/shr/shower/themes/ribbon/styles/styles.css">
+    
+    <link rel="stylesheet" href="../../vendor/highlight/styles/agate.min.css">
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .slide ul {
+            width: 110%;
+            font-size: 1.4rem;
+        }
+
+        .slide .columns img {
+            width: 120%;
+        }
+
+        .hljs
+        {
+            background: rgb(71, 73, 73)!important;
+        }
+        
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1>Unity</h1>
+        <p>Maycon Guerra</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2>Unity</h2>
+        <figure>
+            <img class="cover" src="img/u_Unity/unity.png"style="height: auto!important; width: 100vw;" >
+        </figure>
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: white;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: white;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: white;
+            }
+        </style>
+    </section>
+    
+    <section class="slide">
+        <h2 style="font-size: 4em;" class="shout shrink">Adicionando Sons</h2>
+    </section> 
+
+    <section class="slide">
+        <h2>Adicionando Sons</h2>
+        <div class="columns two">
+            <ul style="font-size: 0.7em; width: 80%;">
+                <li> Criar a pasta "Resources" dentro da pasta de Assets </li>
+                <li> Baixar os áudios e colocar na pasta Resources </li>
+                <li> Criar um componente empty </li>
+                <li> Criar uma classe para controlar o áudio </li>
+            </ul>
+<pre class="next" style="width: 85%; padding: 0; text-align: left; font-size: 0.7rem; margin-top: -200px;" >
+<code class="language-csharp" >
+public class GerenciaSom : MonoBehaviour
+{
+    public static AudioClip audio01, audio02;
+    static AudioSource fonteSom;
+
+    void Start()
+    {
+        som1 = Resources.Load<AudioClip>("nomeDoAudio");
+        som2 = Resources.Load<AudioClip>("nomeDoAudio2");
+
+        fonteSom.GetComponent<AudioSource>();
+    }
+
+    public static TocaSom( string audio )
+    {
+        switch( audio )
+        {
+            case "som1":
+                fonteSom.PlayOneShot( som1 );
+                break;
+            case "som2":
+                fonteSom.PlayOneShot( som2 );
+                break;
+        }
+    }
+
+}
+</code>
+</pre>
+        </div>        
+    </section>
+
+    
+    
+    <footer class="badge">
+        <a href="javascript:;" onclick="window.print(); return false;" >Baixar PDF</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="../../vendor/shr/shower/shower.js"></script>
+    <script src="../../vendor/highlight/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script
+    <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
