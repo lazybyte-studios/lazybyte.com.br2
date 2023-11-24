@@ -1,7 +1,7 @@
 :root 
 {
     --raisin-black-2: hsla(236, 17%, 17%, 0.95)!important;
-    --raisin-black-3: hsla(280, 11%, 11%, 0.85)!important;
+    --raisin-black-44: hsla(280, 11%, 11%, 0.85)!important;
 
     --status-open: #34ff4a;
     --status-close: #ff3434;
@@ -33,7 +33,7 @@
 {
     .header-top
     {
-        background-color: var(--raisin-black-3);
+        background-color: var(--raisin-black-44);
     }
 
     .search-btn

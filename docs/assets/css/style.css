@@ -1,11 +1,4 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-@import url(ajustes.css);
-
-
-
+@import url("ajustes.css");
 
 /*-----------------------------------*\
   #CUSTOM PROPERTY
@@ -160,9 +153,6 @@ body {
 :focus-visible { outline-offset: 4px; }
 
 
-
-
-
 /*-----------------------------------*\
   #REUSED STYLE
 \*-----------------------------------*/
@@ -210,6 +200,11 @@ body {
 .skewBg {
   position: relative;
   z-index: 1;
+}
+
+.liberado {
+  color: white!important;
+  text-shadow: 0 0 3px #000;
 }
 
 .skewBg::before {
@@ -314,8 +309,44 @@ body {
   line-height: 1.8;
 }
 
+.status-dot {
+  position: relative;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  /* background: #34ff4a; */
+  border-radius: 50%;
+animation: pulse 2s infinite;
+}
+.status-dot::after {
+  content: "";
+  position: absolute;
+  top: 2.2px;
+  left: 2.2px;
+  height: 6px;
+  width: 6px;
+  border-radius: 50%;
+  /* background: #34ff4a; */
+  animation: pulse 2s infinite;
+  transform-origin: center center;
+}
 
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
 
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
 
 
 /*-----------------------------------*\
@@ -1365,9 +1396,6 @@ body {
 }
 
 
-
-
-
 /**
  * responsive for larger than 992px screen
  */
@@ -1383,8 +1411,6 @@ body {
   :is(.header, .hero, .live-match) .container { max-width: unset; }
 
   .scrollbar-item { min-width: calc(33.33% - 20px); }
-
-
 
   /**
    * HEADER
@@ -1428,7 +1454,7 @@ body {
 
   .header .social-wrapper { gap: 15px; }
 
-  .header .social-list { gap: 10px; }
+  .header .social-list { gap: 30px; }
 
   .social-title {
     color: var(--white);
@@ -1441,7 +1467,16 @@ body {
     background-color: var(--jet);
     color: var(--marigold);
     font-size: var(--fs-9);
-    padding: 8px 10px;
+    padding: 8px 9px;
+    transform: scale( 1.5 );
+    transition: var(--transition);
+    width: 30px;
+    height: 30px;
+    border-radius: 200px;
+  }
+
+  .header .social-link:hover {
+    transform: scale(2);
   }
 
   .header-bottom { outline: 1px solid hsla(0, 0%, 0%, 0.2); }
@@ -1612,6 +1647,18 @@ body {
 
   .header-bottom::before { width: 270px; }
 
+  .header-bottom::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 87vw;
+    width: 5px;
+    transform: skewX(16deg) translateX(var(--translateX, 0));
+    background-color: var(--marigold);
+    transition: var(--transition);
+  }
+
   .navbar-link {
     font-size: var(--fs-9);
     padding-inline: 25px;
@@ -1689,3 +1736,4 @@ body {
   .footer .container { grid-template-columns: 1fr 0.7fr 0.7fr 1fr; }
 
 }
+
