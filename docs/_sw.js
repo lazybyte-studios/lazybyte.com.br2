@@ -1,62 +1,52 @@
-// gera o cache 
-// aqui é só adicionar os caches
-const CACHE_NAME = 'V0';
-
-const STATIC_CACHE_URLS = [
-  '/',
-  '/index.html'
-];
-
 /*
-self.addEventListener('activate', (event) => {
-  const currentCacheVersion = CACHE_NAME; 
-  const cacheWhitelist = [currentCacheVersion];
+Chamando pelo service worker geramos uma espécie de multithread (este é um exemplo)
 
-  event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cacheName => {
-          if (!cacheWhitelist.includes(cacheName)) {
-            return caches.delete(cacheName);
-          }
-        })
-      );
-    })
-  );
-});*/
+Só pode haver um no app.
 
-self.addEventListener('install', event => {
-  console.log('Service Worker installing.');
-  event.waitUntil(
-    caches.open(CACHE_NAME)
-    .then(cache => cache.addAll(STATIC_CACHE_URLS))  
-  )
-});
+Deve ficar na raiz, assim pode acessar todos os arquivos
 
-self.addEventListener('activate', event => {
-  console.log('Service Worker activating.');
-  // delete any unexpected caches
-  event.waitUntil(
-    caches.keys()
-    .then(keys => keys.filter(key => key !== CACHE_NAME))
-    .then(keys => Promise.all(keys.map(key => {
-        console.log(`Deleting cache ${key}`);
-        return caches.delete(key)
-    })))
-  );
-});
+Não necessita a importação usando script dos arquivos js na index.
 
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('_sw.js').then(registration => {
-    registration.update(); // Isso força a atualização do Service Worker
-  });
+Como você deve saber, o JavaScript é de thread único e não permite a criação de threads. Um web worker permite executar código em um thread separado para uso geral.
+
+Como o Web Worker possui seu próprio encadeamento, ele pode executar tarefas com muitos processos sem congelar a página.
+
+https://womakerscode.gitbook.io/pwa-workshop/3.-precaching-e-modo-offline-basico
+
+*/
+
+const SW = class {
+
+  constructor()
+  {
+    this.limpaSW();
+    this.instalaSW();
+  }
+
+  limpaSW()
+  {
+    // Exclui o service worker se houver uma versão nova
+    navigator.serviceWorker.getRegistrations().then(function(registrations) {
+      for(let registration of registrations) {
+          registration.unregister();
+      } 
+    });
+  }
+
+  instalaSW()
+  {
+    // instala o Service Worker e chama a criação do cache       
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker
+      .register('_cache.js')
+          .then(serviceWorker => {
+          console.log('Service Worker registered: ' + serviceWorker);
+          })
+          .catch(error => {
+          console.log('Error registering the Service Worker: ' + error);
+      });
+    }
+  }
 }
 
-self.addEventListener('fetch', event => {
-    // Cache-First Strategy 
-    event.respondWith(
-      caches.match(event.request) // check if the request has already been cached
-      .then(cached => cached || fetch(event.request)) // otherwise request network
-    );
-});
-
+export{ SW };
