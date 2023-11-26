@@ -17,27 +17,21 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@600;700;800&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="./assets/css/vegas.css">
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <script type="text/javascript" src="assets/js/script.js" defer ></script>
-  <script type="text/javascript" src="assets/js/zepto.min.js" defer ></script>
-  <script type="module" src="assets/js/vegas.js" defer ></script>
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/vegas.min.js" defer></script>
   <script type="text/javascript" src="assets/js/preloader.js" defer ></script>
   <script type="module" src="assets/js/lazy.js" defer ></script>
-
-  <script type="text/javascript" defer >
-    $(function() {
-        $('#home').vegas({
-            slides: [
-                { src: 'assets/hero-bg.jpg' }
-            ]
-        });
-    });
-  </script>
   
 </head>
 
 <body id="top">
+
+  <div id="vegas" class="home2" > <div class="img-bg"></div></div>
 
   <div id="overlay">
     <div id="progstat"></div>
@@ -143,7 +137,7 @@
 
     <article>
 
-      <section class="section hero" id="home" aria-label="home" style="background-image: url(../assets/imagens/hero-bg.jpg);" >
+      <section class="section hero" id="home" aria-label="home" >
         
         <div class="container destaque">
 

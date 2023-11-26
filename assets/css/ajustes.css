@@ -100,4 +100,21 @@
     text-align:center;
     color:#fff;
   }
+
+  /*============= Banner Animado =============*/
+  #vegas {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    background-size: cover;
+    z-index: -1;
+    aspect-ratio: 16 / 9;
+    resize: horizontal;
+}
+
+.footer
+{
+    background: var( --raisin-black-3 );
+}
   
