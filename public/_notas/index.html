@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Shower Presentation Engine</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="_notas/vendor/shr/shower/themes/ribbon/styles/styles.css">
+    <style>
+
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .shower.list {
+            --slide-scale: 0.5;
+        }
+
+        *{
+          box-sizing: border-box;
+        }
+
+        .search-box{
+          width: fit-content;
+          height: fit-content;
+          position: absolute;
+          right: 15%;
+          top: 30px;
+        }
+        .input-search
+        {
+          height: 50px;
+          width: 50px;
+          border-style: none;
+          padding: 10px;
+          font-size: 18px;
+          letter-spacing: 2px;
+          outline: none;
+          border-radius: 25px;
+          transition: all .5s ease-in-out;
+          background-color: #22a6b3;
+          padding-right: 40px;
+          color:#fff;
+        }
+        .input-search::placeholder{
+          color:rgba(255,255,255,.5);
+          font-size: 18px;
+          letter-spacing: 2px;
+          font-weight: 100;
+        }
+        .btn-search{
+          width: 50px;
+          height: 50px;
+          border-style: none;
+          font-size: 20px;
+          font-weight: bold;
+          outline: none;
+          cursor: pointer;
+          border-radius: 50%;
+          position: absolute;
+          padding-top: 10px;
+          right: 0px;
+          color:#ffffff ;
+          background-color:transparent;
+          pointer-events: painted;
+        }
+        .btn-search:focus ~ .input-search
+        {
+          width: 300px;
+          border-radius: 0px;
+          background-color: transparent;
+          border-bottom:1px solid rgba(255,255,255,.5);
+          transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+        .input-search:focus{
+          width: 300px;
+          border-radius: 0px;
+          background-color: transparent;
+          border-bottom:1px solid rgba(255,255,255,.5);
+          transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+        }
+
+        .btn-search i
+        {
+            font-family: FontAwesome!important;
+        }
+
+        .shower.list .slide {
+            box-shadow: 0 0 0 1px #376da3, 0 0 0 20px #4b86c2, 0 20px 50px rgb(0 0 0 / 30%);
+        }
+
+        .cover2,
+        .capa
+        {
+            /*pointer-events:none;*/
+        }
+
+        .slide h2
+        {
+            text-shadow: 0 0 10px rgba( 0, 0, 0, 1.0 );
+            /*pointer-events: all!important;*/
+
+        }
+
+        .slide p.copyright
+        {
+            text-shadow: 0 0 5px rgba( 0, 0, 0, 1.0 );
+            /*pointer-events: all!important;*/
+
+        }
+
+        .slide h2
+        {
+            color: #fff!important;
+        }
+
+        .cover2 h2
+        {
+            margin: 30px 0 0;
+            color: white;
+            text-align: center;
+            font-size: 70px;
+        }
+
+        .cover2 p
+        {
+            margin: 10px 0 0;
+            text-align: center;
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        #tela
+        {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        #tela .capa
+        {
+            background: red;
+            display: inline-block;
+
+        }
+
+    </style>
+    <script src="_notas/public/JSON/slides.json"></script>
+</head>
+<body class="shower list" >
+
+<div class="search-box">
+    <button class="btn-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <input type="search" id="busca" class="input-search" placeholder="Pesquisar..." onkeyup="if( this.value.length >= 3) { capa.Busca(); }" onblur="location.href = location.href;" >
+
+</div>
+
+    <header class="caption">
+        <h1>Notas</h1>
+        <p>Prof. Maycon Guerra</p>
+    </header>
+
+    <div class="progress"></div>
+
+<script type="text/javascript" defer>
+
+class Capa
+{
+    constructor(  )
+    {
+        //this.Limpa();
+        this.capa = JSON.parse( dados );
+        this.praOnde = "";
+        //this.OrganizaCapas( );
+
+        this.CriaCapas();
+        this.Navega();
+
+    }
+
+    CriaCapas()
+    {
+        var ca = this.capa;
+        ca.sort(function (a, b) {
+            return a.titulo.localeCompare(b.titulo);
+        });
+
+        this.capa = ca;
+
+        for (var i = 0; i < this.capa.length; i++)
+        {
+            var textoTitulo = this.capa[i].titulo ;
+            var textoSubtitulo = this.capa[i].subtitulo ;
+            var textoImagem = this.capa[i].imagem ;
+            var textoLink = this.capa[i].link ;
+
+            var id = "capa" + i;
+            var sec = "sec" + i;
+            var titulo = "tit" + i;
+
+            const section = document.createElement('section');
+            section.setAttribute( "id", sec );
+            section.setAttribute( "class", "slide" );
+            section.setAttribute( "data-link", textoLink );
+            //section.setAttribute( "style", 'background: url(public/shr/img/'+ textoImagem +'); background-size: cover;' );
+            section.setAttribute( "style", 'background: url(https://docs.google.com/uc?id='+ textoImagem +'); background-size: cover;' );
+
+            const h2 = document.createElement("h2");
+            h2.innerText = textoTitulo;
+
+            const subtitulo = document.createElement('p');
+            subtitulo.innerText = textoSubtitulo;
+
+            const p = document.createElement('p');
+            p.setAttribute( "class", "copyright right white" );
+            p.innerText = "mWaR.br - Todos os Direitos Reservados";
+
+            document.body.appendChild(section);
+            document.getElementById( sec ).appendChild( h2 );
+            document.getElementById( sec ).appendChild( p );
+
+        }
+    }
+
+    Busca() {
+        let resultado = '[';
+        var input = document.getElementById("busca").value;
+        input.toLowerCase();
+        //let x = document.querySelector('#list-holder');
+        //x.innerHTML = ""
+
+        for (let i = 0; i < this.capa.length; i++) {
+
+            let obj = this.capa[i];
+
+            if (obj.titulo.toLowerCase().includes(input)) {
+
+                resultado += '{"titulo" : "'+obj.titulo+'", "subtitulo" : "'+obj.subtitulo+'", "imagem" : "'+obj.imagem+'", "link":"'+obj.link+'" }';
+            }
+        }
+
+        resultado += ']';
+
+        this.capa = JSON.parse( resultado );
+
+        this.Limpa();
+
+        this.OrganizaCapas();
+
+        this.Navega();
+
+    }
+
+    Limpa()
+    {
+
+        var element = document.getElementsByTagName("section"), index;
+
+        for (index = element.length - 1; index >= 0; index--) {
+            element[index].parentNode.removeChild(element[index]);
+        }
+
+    }
+
+    OrganizaCapas( )
+    {
+        //alert(capa[0].titulo)
+
+        var ca = this.capa;
+
+        this.Limpa();
+
+        ca = ca.sort(function (a, b) {
+                return a.titulo.localeCompare(b.titulo);
+            });
+
+        this.capa = ca;
+
+
+        //console.log('<pre>' + JSON.stringify( capa, 0, 4 ) + '</pre>');
+
+        for (var i = 0; i < ca.length; i++) {
+            this.CriaCapas( i );
+        }
+    }
+
+    Navega()
+    {
+        var elements = document.getElementsByClassName("slide");
+
+        var myFunction = function() {
+            var attribute = this.getAttribute("data-link");
+            window.location.href = "_notas/public/shr/" + attribute;
+        };
+
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].addEventListener('click', myFunction, false);
+        }
+    }
+
+}
+
+var capa = new Capa();
+
+/*document.querySelector('.slide').addEventListener('click', function () {
+    alert("um");
+})*/
+
+
+document.getElementById("busca").addEventListener("search", function(event) {
+  window.location.href = window.location.href;
+});
+
+
+
+</script>
+
+</body>
+</html>

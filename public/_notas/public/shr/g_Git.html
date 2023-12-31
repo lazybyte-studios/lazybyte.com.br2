@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Git </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../../vendor/shr/shower/themes/ribbon/styles/styles.css">
+
+    <link rel="stylesheet" href="../../vendor/highlight/highlight.default.min.css">
+    <link rel="stylesheet" href="../../vendor/highlight/atom-one-dark-reasonable.css">
+
+
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+
+        .slide ul {
+            width: 110%;
+            font-size: 1.4rem;
+        }
+
+        .slide .columns img {
+            width: 120%;
+        }
+
+        .shower.list {
+            --slide-scale: 0.5;
+        }
+
+        .slide h2
+        {
+            text-shadow: 0 0 3px rgba(0,0,0,1);
+        }
+
+    </style>
+</head>
+<body class="shower list">
+
+    <header class="caption">
+        <h1> Git </h1>
+        <p>Maycon Guerra</p>
+    </header>
+
+    <section class="slide" id="cover">
+        <h2></h2>
+        <figure>
+            <img class="cover" src="https://docs.google.com/uc?id=15NjMjvI7If8GklZQFhfVJRamhShEwKYN" style="height: auto!important; width: 100vw;" >
+        </figure>
+        <style>
+            #cover h2 {
+                margin: 30px 0 0;
+                color: white;
+                text-align: center;
+                font-size: 70px;
+            }
+
+            #cover p {
+                margin: 10px 0 0;
+                text-align: center;
+                color: white;
+                font-style: italic;
+                font-size: 20px;
+            }
+
+            #cover p a {
+                color: white;
+            }
+        </style>
+    </section>
+
+    <section class="slide">
+        <h2>Fluxo de trabalho</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> O Git é um sistema de controle de versão. </li>
+                <li> Permite manter uma colecção de arquivos organizada e realizar operações como mescla de arquivos, recuperação de versões anteriores, etc </li>
+                <li> Seu repositório local consiste em três "árvores" (trees) mantidas pelo Git. </li>
+                <li> A primeira é o seu Diretório de Trabalho, que contém os arquivos reais. </li>
+                <li> A segunda é o Índice (index), que atua como uma área de preparação. </li>
+                <li> A terceira é a HEAD, que aponta para o último commit que você fez. </li>
+            </ul>
+            <figure >
+                <img src="https://docs.google.com/uc?id=1V7NEhI_1_ulK75IUhVxo7npAnesTns2f" style="width: 125%;" >
+            </figure>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Criando um repositório vazio</h2>
+        <div class="columns two">
+            <ul style="font-size: 1.1rem;">
+                <li> comando: git init </li>
+                <li> O Git necessita de uma pasta vazia para funcionar.</li>
+                <li> Crie uma pasta no local onde deseja trabalhar. </li>
+                <li> Execute o comando ao lado para iniciar o repositório.</li>
+            </ul>
+            <pre style="font-size: 0.8rem; border: solid 2px #000; border-radius: 8px;" class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # inicia o repositório na pasta atual
+    git init
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Clonando um repositório</h2>
+        <div class="columns two">
+            <ul style="font-size: 1.1rem;">
+                <li> comando: git clone /caminho/para/o/repositorio. </li>
+                <li> Podemos clonar um repositório já existente local ou na nuvem.</li>
+                <li> Este repositório pode ter arquivos prévios ou estar vazio. </li>
+                <li> Você deve ter permissão para ler o repositório ou o mesmo ser público.</li>
+                <li> Execute o comando ao lado para clonar o repositório.</li>
+            </ul>
+            <pre style="font-size: 0.8rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem;" class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # clona um repositório hospedado no github
+    git clone https://github.com/mwar-br/nasa.git
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2 class="shout shrink" style="font-size: 2.8rem;"> Crie os arquivos no diretório de trabalho. </h2>
+    </section>
+
+    <section class="slide">
+        <h2>Adicionar arquivos ao monitoramento Git</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Depois de clonar ou criar o repositório a pasta passa a ser mapeada.</li>
+                <li> O Git consegue saber quando um arquivo foi criado, alterado ou excluído.</li>
+                <li> Isso pode ser checado com o comando git status </li>
+                <li> Quando existe uma alteração no arquivo, o comando git add permite registrar esta alteração. </li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # checa se houve alterações na pasta
+    git status
+
+    # adiciona todos os arquivos ao diretório de Trabalho
+    git add .
+
+    # adiciona apenas o arquivo mencionado ao diretório de Trabalho
+    git add texto.txt
+
+    # adiciona todos os arquivos do tipo txt ao diretório de Trabalho
+    git add *.txt
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Registrar as alterações: Commit</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Quando finalizamos a edição de um arquivo e queremos registrar essa alteração usamos o comando commit.</li>
+                <li> Ele nos ajuda a criar um histórico das alterações que foram realizadas no código.</li>
+                <li> Inclusive podendo desfazê-las posteriormente.</li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # checa se houve alteração na pasta
+    git status
+
+    # Adicionamos todos os arquivos modificados no diretório de Trabalho
+    git add .
+
+    # Salvar as alterações no repositório local
+    git commit -m "comentário sobre o que foi feito"
+
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Enviando as alterações para o repositório remoto</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Depois que nossas alterações foram registradas no repositório local, precisamos enviar para o repositório remoto.(github.com) </li>
+                <li> Para isso usamos o comando git push. </li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # envia as alterações as alterações locais para o repositório remoto
+    # normalmente hospedado no site github.com
+    git push
+
+    # se o repositório não existe na nuvem temos que forçar o seu envio
+    git remote add origin https://endereco/do/servidor
+
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Criando ramificações - branches</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Podemos criar branchs para nosso repositório.</li>
+                <li> Assim podemos criar uma nova versão de nosso código sem interferir no que já está pronto ou o que está sendo desenvolvido por outra pessoa.</li>
+                <li> Para isso usamos o comando git branch.</li>
+                <li> Podemos também alternar entre as branch com o comando git checkout</li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # cria uma nova branch do código para um novo desenvolvimento
+    git branch nome-da-branch
+
+    # alternando para a branch criada
+    git checkout nome-da-branch
+
+    # enviando a branch para o repositório remoto
+    git push origin nome-da-branch
+
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2> Atualizando e mesclando branch </h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Podemos buscar as alterações mais recentes em uma branch usando o comando git pull </li>
+                <li> Usando o comando git merge branch-name podemos mesclar a branch atual com a branch branch-name</li>
+                <li> Podemos fazer uma previsão de conflito entre as branchs se houver usando o comando git diff </li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # busca os códigos atuais no repositório da nuvem
+    git pull origin 'branch_name'
+
+    # mesclando as branchs
+    git merge 'branch_name'
+
+    # antes de mesclar um branch podemos fazer uma previsão
+    # se haverá conflitos entre as branchs
+    git diff branch-que-sera-mesclado branch-onde-sera-mesclado
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2> Resetando uma branch </h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Podemos começar de novo com a versão mais recente do código do repositório remoto zerando a branch desejada. </li>
+                <li> Para isso usamos o comando git reset --hard. </li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # Descarte todas as minhas alterações locais e faça meu ramo atual
+    # ser idêntico ao ramo do repositório remoto
+    git reset --hard origin/master
+
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2> Renomeando uma branch </h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Podemos renomear uma branch usando o código abaixo. </li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # Renomeando uma branch
+    git branch -m master main
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Criar um repositório privado (onedrive)</h2>
+        <div class="columns two">
+            <ul style="font-size: .9rem;">
+                <li> Podemos criar um repositório privado para o onedrive. </li>
+                <li> Assim não teremos as limitações que o github impõe ( arquivos de no máximo 100mb / 2Gb por repositório )</li>
+            </ul>
+            <pre style="font-size: 0.85rem; border: solid 2px #000; border-radius: 8px; padding-right: 2rem; " class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+    # Vá até a pasta que manterá os arquivos do Git
+    cd /caminho/para/a/pasta/que/manterá/os/arquivos/no/onedrive
+    # inicie o repositório na pasta atual
+    git init
+    # criando o repositório Bare. Um repositório bare
+    # no Git é aquele que não possui um diretório de trabalho.
+    git config --bool core.bare true
+
+    # Vá ao diretório de trabalho e clone o repositório Bare criado
+    git clone /caminho/para/a/pasta/que/manterá/os/arquivos/no/onedrive
+
+</code>
+            </pre>
+        </div>
+    </section>
+
+    <section class="slide" style="background: url(https://docs.google.com/uc?id=1V7NEhI_1_ulK75IUhVxo7npAnesTns2f) no-repeat; background-size: 90%;" >
+    </section>
+
+    <section class="slide">
+        <h2>Não monitorar certos aquivos e pastas</h2>
+        <div class="columns two">
+            <pre style="font-size: 0.8rem; border: solid 2px #000; border-radius: 8px;" class="hljs mb-0 block min-h-full overflow-auto">
+<code class="language-bash ">
+
+    # ignorar tudo (dirs, files, sub-dirs, sub-files)
+    /*
+    # não ignorar o .gitignore
+    !.gitignore
+
+    # não ignorar o diretório  dir
+    !/fish
+
+    # ignorar os arquivos e subdiretorios /fish
+    /fish/*
+
+    # não ignorar o arquivo config.fish
+    !/fish/config.fish
+
+</code>
+            </pre>
+            <figure >
+                <img src="https://docs.google.com/uc?id=1uOA37FIU00hZXeDG0TSG-XcbA3sFuNIs" style="width: 80%;" >
+            </figure>
+        </div>
+    </section>
+
+
+
+
+    <footer class="badge">
+        <!-- <a href="javascript:;" onclick="window.print(); return false;" >Baixar PDF</a> -->
+        <a href="/notas">Voltar</a>
+    </footer>
+
+    <div class="progress"></div>
+
+    <script src="../../vendor/shr/shower/shower.js"></script>
+
+    <!--
+
+        https://rogerdudler.github.io/git-guide/
+
+    -->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
