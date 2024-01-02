@@ -359,7 +359,7 @@
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://repository-images.githubusercontent.com/193065581/e468c180-78ac-11ea-9510-97b5d2177788) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: #dedede url(https://repository-images.githubusercontent.com/193065581/e468c180-78ac-11ea-9510-97b5d2177788) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Blade</h2>
     </section>
 
@@ -393,7 +393,7 @@
                 </li>
 
             </ul>
-            <pre style="margin-top: -160px; font-size: 0.68rem; " class="hljs mb-0 block min-h-full overflow-auto">
+            <pre style="margin-top: -180px; font-size: 0.68rem; " class="hljs mb-0 block min-h-full overflow-auto">
             <code class="language-php ">
                     &lt;!-- blade de template --&gt;
                     &lt;!DOCTYPE html&gt;
@@ -412,6 +412,7 @@
                         $titulo = "Wireframe Home";
                     ?&gt;
                     @extends('temas.wireframe')
+                    @section('conteudos')
                         &lt;h1&gt;{{ $titulo }}&lt;/h1&gt;
                         &lt;ul&gt;
                             @foreach($itens as $item)
@@ -428,11 +429,6 @@
         <h2> Controller </h2>
     </section>
 
-
-
-
-
-
     <section class="slide">
         <h2> Listando Usuários <br> (Read) </h2>
         <div class="columns two">
@@ -443,19 +439,8 @@
                 <br>
 
             </ul>
-            <pre style="font-size: 0.58rem; border: solid 2px #000; border-radius: 8px; margin-top: -220px; " class="hljs mb-0 block min-h-full overflow-auto">
+            <pre style="font-size: 0.58rem; border: solid 2px #000; border-radius: 8px; margin-top: -200px; " class="hljs mb-0 block min-h-full overflow-auto">
             <code class="language-php ">
-                    # checar a instalação do Laravel
-                    composer install
-
-                    # Criando as chaves criptográficas
-                    php artisan key:generate
-
-                    # importar o laravel ui
-                    composer require laravel/ui
-
-                    # estrutura de Login
-                    php artisan ui bootstrap --auth
 
                     # Crie as rotas
                     # Cria a rota de usuários nomeada

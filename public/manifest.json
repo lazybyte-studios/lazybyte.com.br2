@@ -1,0 +1,25 @@
+{
+    "name": "PWA DevApp",
+    "short_name": "PWA DevApp",
+    "description": "PWA DevApp - minhas ferramentas",
+    "scope": ".",
+    "start_url": "./teste.html",
+    "display" : "standalone",
+    "orientation": "portrait",
+    "theme_color": "#009578",
+    "background_color": "#6dcdb1",
+    "generated" : "true",
+    "icons": [
+      {
+        "src": "public_html/imagens/icons/android-chrome-192x192.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "public_html/imagens/icons/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

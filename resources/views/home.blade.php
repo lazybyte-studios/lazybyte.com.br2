@@ -3,7 +3,7 @@
     $titulo = "Wireframe Home";
 ?>
 
-@extends('temas.wireframe')
+@extends('temas.lazy')
 
 @section('content')
 
