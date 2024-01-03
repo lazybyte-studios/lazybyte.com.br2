@@ -4,14 +4,14 @@
     <title>Laravel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="../../vendor/shr/shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="../../assets/shr/shower/themes/ribbon/styles/styles.css">
 
-    <link rel="stylesheet" href="../../vendor/highlight/highlight.default.min.css">
-    <link rel="stylesheet" href="../../vendor/highlight/atom-one-dark-reasonable.css">
+    <link rel="stylesheet" href="../../assets/highlight/highlight.default.min.css">
+    <link rel="stylesheet" href="../../assets/highlight/atom-one-dark-reasonable.css">
 
     <link rel="stylesheet" href="../css/timeline.css">
 
-    <script type="text/javascript" src="../../vendor/highlight/highlight.min.js" defer ></script>
+    <script type="text/javascript" src="../../assets/highlight/highlight.min.js" defer ></script>
 
     <script type="text/javascript" defer >
 

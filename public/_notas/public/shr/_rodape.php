@@ -6,9 +6,9 @@
 
     <div class="progress"></div>
 
-    <script src="../../vendor/shr/shower/shower.js"></script>
-    <script src="../../vendor/plantUML/jquery.min.js"></script>
-    <script src="../../vendor/plantUML/plantuml-encoder.min.js"></script>
+    <script src="../../assets/shr/shower/shower.js"></script>
+    <script src="../../assets/plantUML/jquery.min.js"></script>
+    <script src="../../assets/plantUML/plantuml-encoder.min.js"></script>
     <!-- Copyright © 3000 Yours Truly, Famous Inc. -->
 
     <script>

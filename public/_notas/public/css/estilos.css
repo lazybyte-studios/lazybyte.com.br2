@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: FontAwesome;
-  src: url( ../../vendor/shr/fontawesome-webfont.woff2) format('woff2');
+  src: url( ../../assets/shr/fontawesome-webfont.woff2) format('woff2');
 }
 
 body,
