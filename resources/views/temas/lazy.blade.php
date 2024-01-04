@@ -88,7 +88,9 @@
 
       <div class="container">
 
-        <h1><a href="#" class="logo"> LazyByte </a></h1>
+        <h1 id="logo" class="position-relative" > 
+          <object type="image/svg+xml" data="{{asset('imagens/lazy_logo.svg')}}" ></object>
+        </h1>
 
         <nav class="navbar" data-navbar>
           <ul class="navbar-list">

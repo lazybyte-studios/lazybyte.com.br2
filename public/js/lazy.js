@@ -30,7 +30,7 @@ $(document).ready(function() {
       preload: true,
       transitionDuration: 5000,
       slides: imagecollection,
-      overlay: './assets/js/overlays/02.png'
+      overlay: '/js/overlays/02.png'
   });
 
 });

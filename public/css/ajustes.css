@@ -13,7 +13,17 @@
     background-color: var( --status-open )!important;
 }
 
-
+#logo
+{
+    display: block;
+    position: absolute;
+    top: -2.5vw;
+    left: 2.5vw;
+    width: 10%;
+    height: auto;
+    filter: drop-shadow( 0 0 10px rgb( 255 255 255 / 0.6 ) );
+    transition: all 0.3s ease-in-out;
+}
 
 @media (min-width: 1400px)
 {
@@ -48,8 +58,9 @@
 
     .header-bottom::after 
     {
-        left: 15vw!important;
+        left: 14vw!important;
         width: 8px!important;
+        /* animation: moveLinha 5s linear 2s 1 alternate; */
     }
 
     #home

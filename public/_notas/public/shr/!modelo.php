@@ -95,7 +95,7 @@
         </div>
     </section>
 
-<?php require_once "rodape.php"; ?>
+<?php require_once "_rodape.php"; ?>
 
 
 
