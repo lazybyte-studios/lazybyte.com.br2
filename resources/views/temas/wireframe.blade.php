@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ $idioma }}">
+<!DOCTYPE html >
+<html lang="{{ $idioma }}" class="claro" >
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,8 +15,19 @@
         <script src="{{ asset('js/bs/bootstrap.bundle.min.js') }}" defer ></script>
 
         <script src="{{ asset('js/jquery-3.4.1.min.js') }}" defer ></script>
-
+        {{-- hsl(217, 28%, 15%); --}}
         <style>
+            :root
+            {
+                --cor-fundo: #eee; 
+                
+            }
+
+            .escuro:root
+            {
+                --cor-fundo: #000;
+            }
+
             html
             {
                 scroll-behavior: smooth;
@@ -24,6 +35,11 @@
                 height: 100%;
                 display: grid;
                 grid-auto-rows: 100vh;
+            }
+
+            body
+            {
+                background: var( --cor-fundo );
             }
 
             nav a
@@ -79,7 +95,6 @@
                 min-height: 100vh;
                 scroll-snap-align: start;
                 scroll-snap-stop: always;
-                background: #eee;
             }
 
             section > h2
@@ -280,16 +295,23 @@
 
             @keyframes zoom-a
             {
-                0%, 100%
-                {
-                    background-size: 100% auto;
-                }
-                50%
+                0% 
                 {
                     background-size: 110% auto;
                 }
+                90%
+                {
+                    background-size: 100% auto;
+                }
+                100%
+                {
+                    background-size: 100% auto;
+                }
+            
             }
-            #myBtn {
+
+            #myBtn 
+            {
                 display: none; /* Hidden by default */
                 position: fixed; /* Fixed/sticky position */
                 bottom: 20px; /* Place the button at the bottom of the page */
@@ -303,20 +325,84 @@
                 padding: 15px; /* Some padding */
                 border-radius: 10px; /* Rounded corners */
                 font-size: 18px; /* Increase font size */
-                }
+            }
 
-                #myBtn:hover 
-                {
-                background-color: #555; /* Add a dark-grey background on hover */
-                }
+            #myBtn:hover 
+            {
+            background-color: #555; /* Add a dark-grey background on hover */
+            }
 
-                footer
-                {
-                    height: 40vh;
-                    display: flex;
-                    justify-content: flex-end;
-                    flex-direction: column;
-                }
+            #portfolio > div
+            {
+                display: grid;
+                grid-template-columns: repeat( 8, 1fr );/* define a grade */
+                grid-template-rows: repeat(8, 5vw);
+                grid-gap: 15px;
+                padding: 0vw 8vw 1vw 8vw;
+            }
+
+            #portfolio > div img
+            {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            #portfolio > div figure:nth-child( 1 ) 
+            {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+            
+            #portfolio > div figure:nth-child( 2 ) 
+            {
+                grid-column-start: 3;
+                grid-column-end: 5;
+                grid-row-start: 1;
+                grid-row-end: 3;
+            }
+
+            #portfolio > div figure:nth-child( 3 ) 
+            {
+                grid-column-start: 5;
+                grid-column-end: 9;
+                grid-row-start: 1;
+                grid-row-end: 6;
+            }
+
+            #portfolio > div figure:nth-child( 4 ) 
+            {
+                grid-column-start: 1;
+                grid-column-end: 5;
+                grid-row-start: 3;
+                grid-row-end: 6;
+            }
+
+            #portfolio > div figure:nth-child( 5 ) 
+            {
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 6;
+                grid-row-end: 8;
+            }
+
+            #portfolio > div figure:nth-child( 6 ) 
+            {
+                grid-column-start: 4;
+                grid-column-end: 9;
+                grid-row-start: 6;
+                grid-row-end: 8;
+            }
+
+            footer
+            {
+                height: 40vh;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
 
         </style>
 
@@ -335,6 +421,7 @@
 
                     <nav class="col-8 d-flex flex-row justify-content-end" >
                         <a href="#about"> Sobre </a>
+                        <a href="#portfolio"> Portfolio </a>
                         {{-- route('home') . '#id' --}}
                     </nav>
 
@@ -365,7 +452,7 @@
 
         </main>
 
-        <section id="about" >
+        <section id="about" style="padding-left: 8vw;" >
 
             <h2> Sobre </h2>
 
@@ -429,11 +516,36 @@
 
             </div>
         </div>
+        </section>
 
-            @yield('content')
+        <section id="portfolio" >
+            <h2> Portfolio </h2>
+            {{-- Grade 8x8 --}}
+
+            <div>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=01" alt="Image 1">
+                </figure>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=02" alt="Image 2">
+                </figure>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=03" alt="Image 3">
+                </figure>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=04" alt="Image 4">
+                </figure>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=05" alt="Image 5">
+                </figure>
+                <figure >
+                    <img src="https://placehold.co/500x500?text=06" alt="Image 6">
+                </figure>
+            </div>
 
         </section>
 
+        @yield('content')
         <footer id="footer" style="background: #292825;" >
             <div class="container">
                 <div class="row">

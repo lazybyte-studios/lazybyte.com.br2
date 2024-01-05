@@ -340,6 +340,13 @@
         </div>   
     </section>
 
+    <section class="slide" id="cover">
+        <h2></h2>
+        <figure>
+            <img class="cover" src="https://www.htmlecsspro.com/uploads/images/2018/03/aplicando-estilos-css-1521410533.png" style="height: auto!important; width: 100vw;" >
+        </figure>
+    </section>
+
     <section class="slide">
         <h2>CSS</h2>
         <div class="columns two">
@@ -354,12 +361,68 @@
         </div>
     </section>
 
-    <section class="slide" id="cover">
-        <h2>Planejamento Web</h2>
-        <figure>
-            <img class="cover" src="https://docs.google.com/uc?id=1_DsSwUvW5gZrnzATYIzZmHaKH9dFqzlT" style="height: auto!important; width: 100vw;" >
-        </figure>
+    <section class="slide">
+        <h2>Sintaxe</h2>
+        <div class="columns two">
+            <figure>
+                <img  src="https://docs.google.com/uc?id=1Ps7QEwyT0Xprk_3DemlXm-FJWvgUdobW" >
+            </figure>
+            <figure>
+                <img src="https://docs.google.com/uc?id=1aCph6yl9AWKcgmt6OxmdFhCwzouS1yPQ" >
+            </figure>
+        </div>
     </section>
+
+    <section class="slide">
+        <h2> Seletores </h2>
+        <div class="columns two">
+            <figure >
+                <img src="https://docs.google.com/uc?id=1z-xa-Cs1M6SYQhtkuf37jmbLgCv_HJLR" style="width: 100%;" >
+            </figure>
+            <ul style="font-size: .9rem;">
+                <li>
+                    <b>Seletor de elemento</b>: mais usado, formata todos as tags de mesmo tipo.
+                </li>
+                <li>
+                    <b>Seletor de classe</b>: usado para diferenciar um ou mais elementos, podem ser combinados.
+                </li>
+                <li>
+                    <b>Seletor de ID</b>: usado para diferenciar um elemento único na página.
+                </li>
+                <li>
+                    <b>Seletor de atributos</b>: usado para diferenciar elementos que possuam os mesmos atributos.
+                </li>
+                <li>
+                    <b>Pseudo seletores</b>: estilizam elementos em situações específicas, dependendo de interações do usuário, posições na página, entre outros.
+                </li>
+                <li>
+                    <b>Seletor estrela</b>: aplica a estilização à todos os elementos.
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Propriedades</h2>
+        <div>
+            <figure>
+                <img  src="https://www.usabilidoido.com.br/imagens/referencia_visual_css_posicionadores.png" >
+            </figure>
+        </div>
+    </section>
+
+    <section class="slide">
+        <h2>Flexbox e Grid Layout</h2>
+        <p><a href="https://cssgrid-generator.netlify.app/">Grid</a></p>
+        <div>
+            <figure>
+                <img  src="https://docs.google.com/uc?id=1DA_72BoVi2bn3FUsViohUh78vDtM2CVE" width="78%" >
+            </figure>
+        </div>
+        
+    </section>
+
+    
 
     https://drive.google.com/file/d/1y2s5Qr6ecDgwc45tPEGUZq_EzzsSZAgR/view?usp=drive_link
 
