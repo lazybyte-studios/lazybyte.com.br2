@@ -42,7 +42,8 @@ const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 const logo = document.querySelector("#logo");
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", function() 
+{
   if (window.scrollY >= 200) {
     header.classList.add("active");
     backTopBtn.classList.add("active");
@@ -53,3 +54,4 @@ window.addEventListener("scroll", function () {
     logo.setAttribute("style", "width:10%; top: -2.5vw; left: 2.5vw;");
   }
 });
+

@@ -20,6 +20,7 @@
             :root
             {
                 --cor-fundo: #eee; 
+                --hover: #333;
                 
             }
 
@@ -42,6 +43,25 @@
                 background: var( --cor-fundo );
             }
 
+            #menu 
+            {
+                padding-top: 20px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: calc( 100vw - 17px );
+                transition: all 0.3s ease-in-out;
+                z-index: 1000;
+            }
+
+            #menu.fixa
+            {
+                max-height: 80px;
+                padding-top: 25px;
+                position: fixed;
+                background: var( --hover );
+            }
+
             nav a
             {
                 text-decoration: none;
@@ -50,6 +70,7 @@
                 font-size: 1.2rem;
                 font-weight: 700;
                 padding: 10px 20px;
+
             }
 
             .botao,
@@ -273,6 +294,11 @@
                 animation: zoom-a 16s ease-in-out infinite, animate 16s ease-in-out infinite;
             }
 
+            .ativo
+            {
+                color: var( --hover );
+            }
+
             @keyframes animate
             {
                 0%, 100%
@@ -310,6 +336,30 @@
             
             }
 
+            .dropdown
+            {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown ul
+            {
+                display: none;
+                position: absolute;
+                min-width: 160px;
+                z-index: 1;
+            }
+
+            .dropdown ul li
+            {
+                list-style-type: none;
+            }
+
+            .dropdown:hover ul 
+            {
+                display: block;
+            }
+
             #myBtn 
             {
                 display: none; /* Hidden by default */
@@ -329,7 +379,7 @@
 
             #myBtn:hover 
             {
-            background-color: #555; /* Add a dark-grey background on hover */
+                background-color: #555; /* Add a dark-grey background on hover */
             }
 
             #portfolio > div
@@ -411,17 +461,31 @@
 
         <main class="container-fluid " style="padding: 0!important;" >
 
-            <header class="p-5" style="background-image: url(https://placehold.co/600x400?text=Banner\\n1920x1080);background-attachment: fixed; height: 100vh; width: 100%; background-size: cover;" >
+            <header id="topo" class="p-5" style="background-image: url(https://placehold.co/600x400?text=Banner\\n1920x1080);background-attachment: fixed; height: 100vh; width: 100%; background-size: cover;" >
 
-                <div class="d-flex flex-row justify-content-around mb-5" >
+                <div id="menu" class="d-flex flex-row justify-content-around mb-5" >
 
                     <figure>
                         <img src="https://placehold.co/200x80?text=Logo\n200x80" alt="">
                     </figure>
 
                     <nav class="col-8 d-flex flex-row justify-content-end" >
-                        <a href="#about"> Sobre </a>
+                        <a href="#topo"> Home </a>
+                        <a href="#sobre"> Sobre </a>
                         <a href="#portfolio"> Portfolio </a>
+                        <a href="#servicos"> Serviços </a>
+                        <a href="#contato"> Contato </a>
+                        <a href="#blog"> Blog </a>
+                        <a href="#" class="dropdown" > 
+                            Tecnologias  
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Bootstrap</li>
+                                <li>Git</li>
+                                <li>Deploy</li>
+                            </ul>
+                        </a>
                         {{-- route('home') . '#id' --}}
                     </nav>
 
@@ -434,7 +498,7 @@
 
                 </div>
 
-                <h1 class="text-center" style="margin-top: 18vh; font-size: 4.5rem;" >Texto.com.pontos</h1>
+                <h1 class="text-center" style="margin-top: 30vh; font-size: 4.5rem;" >Texto.com.pontos</h1>
 
                 <p class="text-center col-6 mx-auto ">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non luctus metus. Fusce nisl diam, aliquam nec pharetra ac, cursus non diam.
@@ -546,6 +610,7 @@
         </section>
 
         @yield('content')
+
         <footer id="footer" style="background: #292825;" >
             <div class="container">
                 <div class="row">
@@ -568,7 +633,7 @@
 
             </div>
 
-            <p class="py-4 text-center" style="background: #242320; color: #fff; margin: 0;"> <span class="bottom-copyright" data-customizer="copyright-credit">© Copyright 2017. All Rights Reserved.</span>
+            <p class="py-4 text-center" style="background: #242320; color: #fff; margin: 0;"> <span class="bottom-copyright" data-customizer="copyright-credit"> © Copyright 2017. All Rights Reserved. </span>
             </p>
         </footer>
 
@@ -576,28 +641,74 @@
 
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" ></script>
 
-        <script type="text/javascript">
+        <script type="text/javascript" defer >
+
             AOS.init();
 
-            // Get the button:
-let mybutton = document.getElementById("myBtn");
+            // botão para o topo
+            let mybutton = document.getElementById("myBtn");
+            // menu superior
+            let nav = document.querySelector("#menu");
 
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() 
+            {
+    
+                // Botão para o topo
+               
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+                {
+                    mybutton.style.display = "block";
+                } 
+                else 
+                {
+                    mybutton.style.display = "none";
+                }
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
+                // menu reposicionamento
 
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
+                if(  window.scrollY > 0  )
+                {
+                    nav.classList.add("fixa");
+                }
+                else
+                {
+                    nav.classList.remove("fixa");
+                }
+
+
+            }
+
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() 
+            {
+                document.body.scrollTop = 0; // For Safari
+                document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+            }
+
+            /*let sections = document.querySelector("section");
+            let links = document.querySelector("#menu nav a");
+            
+
+            window.onscroll = () => {
+
+                
+
+                /*sections.forEach( sec => {
+
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop;
+                    let height = sec.offsetHeight;
+                    let id = sec.getAttribute("id");
+
+                    if( top >= offset && top < offset + height )
+                    {
+                        links.classList.remove( 'ativo' );
+                        document.querySelector( 'header nav a[href*=' + id + ']' ).classList.add( "ativo" );
+                    }
+
+                }); 
+            }   */        
 
         </script>
 
