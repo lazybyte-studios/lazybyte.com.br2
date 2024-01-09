@@ -20,7 +20,8 @@
             :root
             {
                 --cor-fundo: #eee; 
-                --hover: #333;
+                --cor-fundoEscuro: #292825; 
+                --hover: #f1d204;
                 
             }
 
@@ -56,10 +57,10 @@
 
             #menu.fixa
             {
-                max-height: 80px;
-                padding-top: 25px;
+                max-height: 85px;
+                padding-top: 20px;
                 position: fixed;
-                background: var( --hover );
+                background: var( --cor-fundoEscuro );
             }
 
             nav a
@@ -69,7 +70,7 @@
                 margin: 0 15px;
                 font-size: 1.2rem;
                 font-weight: 700;
-                padding: 10px 20px;
+                padding: 25px 20px;
 
             }
 
@@ -80,7 +81,7 @@
                 height: 63px;
                 border: 3px solid #f1d204;
                 line-height: 63px;
-                background: #f1d204;
+                background: var( --hover );
                 margin: 0 15px;
                 padding: 0 70px;
                 display: inline-block;
@@ -125,7 +126,8 @@
                 font-size: 35px;
                 line-height: 38px;
                 font-weight: 700;
-                padding-top: 80px;
+                padding-top: 100px;
+                margin-bottom: 20px;
                 text-align: center;
             }
 
@@ -452,6 +454,7 @@
                 display: flex;
                 justify-content: flex-end;
                 flex-direction: column;
+                background: var( --cor-fundoEscuro );
             }
 
         </style>
@@ -466,13 +469,14 @@
                 <div id="menu" class="d-flex flex-row justify-content-around mb-5" >
 
                     <figure>
-                        <img src="https://placehold.co/200x80?text=Logo\n200x80" alt="">
+                        <a href="#topo">
+                            <img src="https://placehold.co/200x80?text=Logo\n200x80" alt="">
+                        </a>
                     </figure>
 
                     <nav class="col-8 d-flex flex-row justify-content-end" >
-                        <a href="#topo"> Home </a>
                         <a href="#sobre"> Sobre </a>
-                        <a href="#portfolio"> Portfolio </a>
+                        <a href="#portfolio"> Portfólio </a>
                         <a href="#servicos"> Serviços </a>
                         <a href="#contato"> Contato </a>
                         <a href="#blog"> Blog </a>
@@ -516,7 +520,7 @@
 
         </main>
 
-        <section id="about" style="padding-left: 8vw;" >
+        <section id="sobre" style="padding-left: 8vw;" >
 
             <h2> Sobre </h2>
 
@@ -584,8 +588,6 @@
 
         <section id="portfolio" >
             <h2> Portfolio </h2>
-            {{-- Grade 8x8 --}}
-
             <div>
                 <figure >
                     <img src="https://placehold.co/500x500?text=01" alt="Image 1">
@@ -611,7 +613,7 @@
 
         @yield('content')
 
-        <footer id="footer" style="background: #292825;" >
+        <footer id="footer" >
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 col-sm-6 col-xs-12">
@@ -676,6 +678,26 @@
                     nav.classList.remove("fixa");
                 }
 
+                // sinalizando o item do menu de acordo com a posição do scroll 
+                let sections = document.querySelectorAll("section");
+                
+                sections.forEach( sec =>{
+                    let top = window.scrollY;
+                    let offset = sec.offsetTop;
+                    let height = sec.offsetHeight;
+                    let id = sec.getAttribute("id");
+
+                    if( top >= offset && top < offset + height )
+                    {
+                        removeClasse();
+                        document.querySelector( '#menu nav a[href*=' + id + ']' ).classList.add( "ativo" );
+                    }
+
+                    if ( top <= 0 )
+                    {
+                        removeClasse();
+                    }
+                });
 
             }
 
@@ -686,30 +708,17 @@
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
             }
 
-            /*let sections = document.querySelector("section");
-            let links = document.querySelector("#menu nav a");
+            function removeClasse()
+            {
+                let allElements = document.querySelectorAll(".ativo");
+                for(i=0; i<allElements.length; i++)
+                { 
+                    allElements[i].classList.remove('ativo');
+                }
+            }
+
             
-
-            window.onscroll = () => {
-
-                
-
-                /*sections.forEach( sec => {
-
-                    let top = window.scrollY;
-                    let offset = sec.offsetTop;
-                    let height = sec.offsetHeight;
-                    let id = sec.getAttribute("id");
-
-                    if( top >= offset && top < offset + height )
-                    {
-                        links.classList.remove( 'ativo' );
-                        document.querySelector( 'header nav a[href*=' + id + ']' ).classList.add( "ativo" );
-                    }
-
-                }); 
-            }   */        
-
+                     
         </script>
 
     </body>
