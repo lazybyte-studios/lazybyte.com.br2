@@ -209,12 +209,12 @@
                 background-size: cover;
             }
 
-            #about p
+            #sobre p
             {
                 padding-top: 5rem;
             }
 
-            #about p::after
+            #sobre p::after
             {
                 content: "";
                 clear: both;
@@ -485,6 +485,7 @@
                             <ul>
                                 <li>HTML</li>
                                 <li>CSS</li>
+                                <li>Javascript</li>
                                 <li>Bootstrap</li>
                                 <li>Git</li>
                                 <li>Deploy</li>
@@ -522,7 +523,7 @@
 
         <section id="sobre" style="padding-left: 8vw;" >
 
-            <h2> Sobre </h2>
+            <h2> Sobre Mim </h2>
 
             <figure class="circulo circulo1"></figure>
 
@@ -587,7 +588,7 @@
         </section>
 
         <section id="portfolio" >
-            <h2> Portfolio </h2>
+            <h2> Meus Projetos </h2>
             <div>
                 <figure >
                     <img src="https://placehold.co/500x500?text=01" alt="Image 1">
