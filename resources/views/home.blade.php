@@ -4,7 +4,7 @@
 
 ?>
 
-@extends('temas.wireframe')
+@extends('temas.lazy')
 
 @section('content')
 

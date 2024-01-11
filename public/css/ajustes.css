@@ -17,9 +17,9 @@
 {
     display: block;
     position: absolute;
-    top: -2.5vw;
+    top: -2vw;
     left: 2.5vw;
-    width: 10%;
+    width: 8%;
     height: auto;
     filter: drop-shadow( 0 0 10px rgb( 255 255 255 / 0.6 ) );
     transition: all 0.3s ease-in-out;
