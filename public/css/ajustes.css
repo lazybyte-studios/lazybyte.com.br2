@@ -21,7 +21,7 @@
     left: 2.5vw;
     width: 8%;
     height: auto;
-    filter: drop-shadow( 0 0 10px rgb( 255 255 255 / 0.6 ) );
+    filter: drop-shadow( 0 0 8,px rgb( 0 0 0 / 0.6 ) );
     transition: all 0.3s ease-in-out;
 }
 
