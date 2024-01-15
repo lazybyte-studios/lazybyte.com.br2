@@ -17,7 +17,7 @@
                 <li class="next" > E você? quem é? E qual seu objetivo no curso? </li>
             </ul>
             <figure >
-                <img src="https://docs.google.com/uc?id=1QnooFk9Q5H_5JvnHJBeSX01m5iuz-D6C" style="width: 100%;" >
+                <img src="https://lh3.google.com/u/0/d/1QnooFk9Q5H_5JvnHJBeSX01m5iuz-D6C" style="width: 100%;" >
             </figure>
         </div>
     </section>
@@ -25,7 +25,7 @@
     <section class="slide" id="cover">
         <h2>Planejamento Web</h2>
         <figure>
-            <img class="cover" src="https://docs.google.com/uc?id=1_DsSwUvW5gZrnzATYIzZmHaKH9dFqzlT" style="height: auto!important; width: 100vw;" >
+            <img class="cover" src="https://lh3.google.com/u/0/d/1_DsSwUvW5gZrnzATYIzZmHaKH9dFqzlT" style="height: auto!important; width: 100vw;" >
         </figure>
     </section>
 
@@ -42,20 +42,20 @@
                 <li> Zoom no baixo e afaste para melhorar qualidade em planos mais abertos.</li>
             </ul>
             <figure >
-                <img src="https://docs.google.com/uc?id=1nETbKll1LkBKeMuA1TTWbh_Dd7Ye6btC" style="width: 130%;" >
+                <img src="https://lh3.google.com/u/0/d/1nETbKll1LkBKeMuA1TTWbh_Dd7Ye6btC" style="width: 130%;" >
             </figure>
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1KNVNmbvdejiACfo5OSH5GQ3u7IbFM4AV) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1KNVNmbvdejiACfo5OSH5GQ3u7IbFM4AV) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Tamanho 4K vs FullHD</h2>
     </section>
 
     <section class="slide" >
         <h2 style="color: #fff;">Distorções</h2>
-        <video style="height: 75%;" controls muted>
-            <source src="https://docs.google.com/uc?id=1My2GHUOcULDh3VokTviZsktfrkrAa2wi" type="video/mp4">
-        </video>
+        
+        <iframe class="video" src="https://drive.google.com/file/d/1My2GHUOcULDh3VokTviZsktfrkrAa2wi/preview" allow="autoplay"></iframe>
+            
     </section>
 
     <section class="slide">

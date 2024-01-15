@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="_notas/assets/shr/shower/themes/ribbon/styles/styles.css">
+    <link rel="stylesheet" href="assets/shr/shower/themes/ribbon/styles/styles.css">
     <style>
 
         .shower {
@@ -146,7 +146,7 @@
         }
 
     </style>
-    <script src="_notas/public/JSON/slides.json"></script>
+    <script src="public/JSON/slides.json"></script>
 </head>
 <body class="shower list" >
 
@@ -204,7 +204,7 @@ class Capa
             section.setAttribute( "class", "slide" );
             section.setAttribute( "data-link", textoLink );
             //section.setAttribute( "style", 'background: url(public/shr/img/'+ textoImagem +'); background-size: cover;' );
-            section.setAttribute( "style", 'background: url(https://docs.google.com/uc?id='+ textoImagem +'); background-size: cover;' );
+            section.setAttribute( "style", 'background: url(https://lh3.google.com/u/0/d/'+ textoImagem +'); background-size: cover;' );
 
             const h2 = document.createElement("h2");
             h2.innerText = textoTitulo;
@@ -291,7 +291,7 @@ class Capa
 
         var myFunction = function() {
             var attribute = this.getAttribute("data-link");
-            window.location.href = "_notas/public/shr/" + attribute;
+            window.location.href = "public/shr/" + attribute;
         };
 
         for (var i = 0; i < elements.length; i++) {

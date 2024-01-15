@@ -12,7 +12,7 @@
     <section class="slide" id="cover" >
         <h2><!-- HTML --></h2>
         <figure>
-            <img class="cover" src="https://docs.google.com/uc?id=1bQM9SzR4BFBxLSz9D8iRb7YlZtJ4gRxe" style="height: auto!important; width: 100vw;" >
+            <img class="cover" src="https://lh3.google.com/u/0/d/1bQM9SzR4BFBxLSz9D8iRb7YlZtJ4gRxe" style="height: auto!important; width: 100vw;" >
         </figure>
     </section>
 
@@ -173,7 +173,7 @@
         </ul>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1UL8FhUpA23ijZlfvWirre-W7vj66VWw1) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1UL8FhUpA23ijZlfvWirre-W7vj66VWw1) no-repeat; background-size: cover;" >
         
     </section>
 
@@ -189,7 +189,7 @@
                 <li>Versão HTML 5 – 2014 </li>
             </ol>
             <figure >
-                <img src="https://docs.google.com/uc?id=1bQM9SzR4BFBxLSz9D8iRb7YlZtJ4gRxe" style="width: 120%;" >
+                <img src="https://lh3.google.com/u/0/d/1bQM9SzR4BFBxLSz9D8iRb7YlZtJ4gRxe" style="width: 120%;" >
             </figure>
         </div>
     </section>
@@ -236,18 +236,18 @@
                 </li>
             </ul>
             <figure >
-                <img src="https://docs.google.com/uc?id=13FcX8yyHDen3kRkZfbzW5JB8N5c46-wC" style="width: 120%;" >
+                <img src="https://lh3.google.com/u/0/d/13FcX8yyHDen3kRkZfbzW5JB8N5c46-wC" style="width: 120%;" >
             </figure>
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1MFpX3jcOC0iWoUYGyhk5Jaev2hlXbRst) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1MFpX3jcOC0iWoUYGyhk5Jaev2hlXbRst) no-repeat; background-size: cover;" >
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1y2s5Qr6ecDgwc45tPEGUZq_EzzsSZAgR) no-repeat; background-size: 99%;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1y2s5Qr6ecDgwc45tPEGUZq_EzzsSZAgR) no-repeat; background-size: 99%;" >
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=15BcalXuX36jn9LLs12SQ-vYBkz8jMgk5) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/15BcalXuX36jn9LLs12SQ-vYBkz8jMgk5) no-repeat; background-size: cover;" >
         <h2 style="color: #fff; margin-top: 1rem;">Guia das <br>Principais <br> Tags do HTML 5 </h2>
     </section>
 
@@ -365,10 +365,10 @@
         <h2>Sintaxe</h2>
         <div class="columns two">
             <figure>
-                <img  src="https://docs.google.com/uc?id=1Ps7QEwyT0Xprk_3DemlXm-FJWvgUdobW" >
+                <img  src="https://lh3.google.com/u/0/d/1Ps7QEwyT0Xprk_3DemlXm-FJWvgUdobW" >
             </figure>
             <figure>
-                <img src="https://docs.google.com/uc?id=1aCph6yl9AWKcgmt6OxmdFhCwzouS1yPQ" >
+                <img src="https://lh3.google.com/u/0/d/1aCph6yl9AWKcgmt6OxmdFhCwzouS1yPQ" >
             </figure>
         </div>
     </section>
@@ -377,7 +377,7 @@
         <h2> Seletores </h2>
         <div class="columns two">
             <figure >
-                <img src="https://docs.google.com/uc?id=1z-xa-Cs1M6SYQhtkuf37jmbLgCv_HJLR" style="width: 100%;" >
+                <img src="https://lh3.google.com/u/0/d/1z-xa-Cs1M6SYQhtkuf37jmbLgCv_HJLR" style="width: 100%;" >
             </figure>
             <ul style="font-size: .9rem;">
                 <li>
@@ -416,7 +416,7 @@
         <p><a href="https://cssgrid-generator.netlify.app/">Grid</a></p>
         <div>
             <figure>
-                <img  src="https://docs.google.com/uc?id=1DA_72BoVi2bn3FUsViohUh78vDtM2CVE" width="78%" >
+                <img  src="https://lh3.google.com/u/0/d/1DA_72BoVi2bn3FUsViohUh78vDtM2CVE" width="78%" >
             </figure>
         </div>
         
@@ -442,14 +442,14 @@
 
     
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1KNVNmbvdejiACfo5OSH5GQ3u7IbFM4AV) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1KNVNmbvdejiACfo5OSH5GQ3u7IbFM4AV) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Tamanho 4K vs FullHD</h2>
     </section>
 
     <section class="slide" >
         <h2 style="color: #fff;">Distorções</h2>
         <video style="height: 75%;" controls muted>
-            <source src="https://docs.google.com/uc?id=1My2GHUOcULDh3VokTviZsktfrkrAa2wi" type="video/mp4">
+            <source src="https://lh3.google.com/u/0/d/1My2GHUOcULDh3VokTviZsktfrkrAa2wi" type="video/mp4">
         </video>
     </section>
 

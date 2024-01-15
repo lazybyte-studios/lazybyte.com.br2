@@ -1,15 +1,8 @@
 <!-- 
+
     
-    /                                       isola o objeto selecionado
-    shift + A                               cria itens
-    shift + Z                               repete o último comando
-    shift + D                               duplica o item selecionado
-    tab                                     acessa os sub objetos
-    nGons                                   select > select all by trait > faces by sides ( modo face )
-    camera > Viewport Display > Thirds      regras dos terços
 
  -->
-
 <?php require_once "_topo.php"; ?>
 
     <header class="caption">
@@ -65,9 +58,9 @@
 
     <section class="slide" >
         <h2 style="color: #fff;">Distorções</h2>
-        <video style="height: 75%;" controls muted>
-            <source src="https://lh3.google.com/u/0/d/1My2GHUOcULDh3VokTviZsktfrkrAa2wi" type="video/mp4">
-        </video>
+        
+        <iframe class="video" src="https://drive.google.com/file/d/1My2GHUOcULDh3VokTviZsktfrkrAa2wi/preview" allow="autoplay"></iframe>
+            
     </section>
 
     <section class="slide">

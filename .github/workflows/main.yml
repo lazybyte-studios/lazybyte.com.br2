@@ -3,7 +3,7 @@ on:
     branches:
       - main
     paths-ignore:
-      - '_Docs/**'
+      - '_Docs/'
       - '.env'
 
 name: 🚀 Deploy website on push

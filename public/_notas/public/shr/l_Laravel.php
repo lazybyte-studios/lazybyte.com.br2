@@ -7,7 +7,7 @@
 
     <section class="slide" id="cover" >
         <figure>
-            <img class="cover" src="https://docs.google.com/uc?id=1YHmbz0v9F4u_YCP5DA_6ik7FrgkL2w_q" >
+            <img class="cover" src="https://lh3.google.com/u/0/d/1YHmbz0v9F4u_YCP5DA_6ik7FrgkL2w_q" >
         </figure>
     </section>
 
@@ -26,7 +26,7 @@
                 </li>
             </ul>
             <figure >
-                <img src="https://docs.google.com/uc?id=1YHmbz0v9F4u_YCP5DA_6ik7FrgkL2w_q" style="width: 100%;" >
+                <img src="https://lh3.google.com/u/0/d/1YHmbz0v9F4u_YCP5DA_6ik7FrgkL2w_q" style="width: 100%;" >
             </figure>
         </div>
     </section>
@@ -62,7 +62,7 @@
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1aAlkW4YVajrWf_ABC9gmG9uinlBrg5lF) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1aAlkW4YVajrWf_ABC9gmG9uinlBrg5lF) no-repeat; background-size: cover;" >
     </section>
 
     <section class="slide">
@@ -91,7 +91,7 @@
                 </li>
             </ul>
             <figure >
-                <img src="https://docs.google.com/uc?id=1KXuBGPYXxQ0_skoy3DaLzsiJJmFSeGa7" style="height: 37%; width: auto; margin-left: 200px;" >
+                <img src="https://lh3.google.com/u/0/d/1KXuBGPYXxQ0_skoy3DaLzsiJJmFSeGa7" style="height: 37%; width: auto; margin-left: 200px;" >
             </figure>
         </div>
     </section>
@@ -101,11 +101,11 @@
             É um padrão de arquitetura de desenvolvimento para organização dos códigos <br> de forma a facilitar a manutenção/atualização dos códigos.
         </p>
         <figure>
-            <img class="cover" src="https://docs.google.com/uc?id=1LQaMTq5QP-bUPlYJnrMdm-v0z_OcOHaV" >
+            <img class="cover" src="https://lh3.google.com/u/0/d/1LQaMTq5QP-bUPlYJnrMdm-v0z_OcOHaV" >
         </figure>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Sistema de Usuários</h2>
     </section>
 
@@ -171,7 +171,7 @@
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://docs.google.com/uc?id=1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;"> Wireframe Layout </h2>
     </section>
 
