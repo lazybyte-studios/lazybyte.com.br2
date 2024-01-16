@@ -13,6 +13,15 @@ Route::get("/notas", function(){
 })->name("notas");
 
 
-// Route::group([ 'prefix' => 'notas', 'as' => 'notas.'], function(){
-//     Route::get('/', [NotaController::class, 'index'])->name('index');
-// });
+Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
+    
+    Route::get('/', function(){ 
+        return view( "sistema/index" , [ "tema" => 'index' ]  );
+    })-> name("index");
+
+    Route::get('/dashboard/', function(){ 
+        return view( "sistema/index",  [ "tema" => 'painel' ] );
+    })-> name("dashboard");
+
+    //Route::get('/', [NotaController::class, 'index'])->name('index');
+});

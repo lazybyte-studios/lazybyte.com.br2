@@ -1,10 +1,10 @@
 <?php
     $idioma = "pt-br";
-    $titulo = "Wireframe Home";
+    $titulo = "LazyByte Digital Studio";
 
 ?>
 
-@extends('temas.lazy')
+@extends('_temas.lazy')
 
 @section('content')
 

@@ -8,6 +8,24 @@
     nGons                                   select > select all by trait > faces by sides ( modo face )
     camera > Viewport Display > Thirds      regras dos terços
 
+
+    Add Ons
+
+        Sun positioner          posicionar a iluminação externa
+
+
+    Tutoriais vendo
+
+        https://www.youtube.com/watch?v=Oz7vCW8INZU 
+
+        https://www.youtube.com/watch?v=e-Ql-bMa9So&t=120s
+
+        https://www.youtube.com/watch?v=Dm8WUiQiJY4
+
+        https://www.youtube.com/@imeshh/videos
+
+        
+
  -->
 
 <?php require_once "_topo.php"; ?>
