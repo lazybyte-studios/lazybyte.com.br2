@@ -1,9 +1,9 @@
+@extends( '_temas.dashboard' )
+
 <?php
     $idioma = "pt-br";
-    $titulo = "Wireframe Home";
+    $titulo = "Painel de Controle";
 ?>
-
-@extends( ( $tema == 'painel' ) ? '_temas.dashboard' : '_temas.wireframe' )
 
 @section('content')
 

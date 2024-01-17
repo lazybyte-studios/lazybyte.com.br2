@@ -6,22 +6,24 @@ use Illuminate\Support\Facades\Route;
 # rota retornando o arquivo views\home.blade.php
 Route::get("/", function(){
     return view("home");
-});
+}) ->name('inicio');
 
+# redireciona para uma pasta
 Route::get("/notas", function(){
     return redirect("_notas");
+    # return redirect()->route('inicio'); 
 })->name("notas");
 
 
 Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
     
     Route::get('/', function(){ 
-        return view( "sistema/index" , [ "tema" => 'index' ]  );
-    })-> name("index");
+        return view( "sistema/index" );
+    })-> name("painel");
 
-    Route::get('/dashboard/', function(){ 
-        return view( "sistema/index",  [ "tema" => 'painel' ] );
-    })-> name("dashboard");
+    Route::get('/login/', function(){ 
+        return view( "sistema/index",  [ "operacao" => 'login' ] );
+    })-> name("login");
 
     //Route::get('/', [NotaController::class, 'index'])->name('index');
 });

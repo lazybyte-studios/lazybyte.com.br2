@@ -1,0 +1,97 @@
+:root
+{
+    --bg1 : #f8f9fc;
+    --cor1 : #4e73df;
+    --cor2 : #fff;
+}
+
+body
+{
+    background: var( --bg1 );
+}
+
+#menuLateral
+{
+    width: 14rem;
+    min-height: 100vh;
+    background-color: var( --cor1 )!important;
+    color: var( --cor2 );
+    float: left;
+}
+
+#menuLateral.toggled
+{
+    width: 6.5rem;
+}
+
+#menuLateral li > a
+{
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 1rem;
+}
+
+#menuLateral li a i
+{
+    font-size: 1.2em;
+    padding-right: 20px;
+    opacity: 0.5;
+    transition: all 0.3s ease-in-out;
+}
+
+#menuLateral li a:hover i,
+#menuLateral li.ativo a i
+{
+    padding-right: 30px;
+    opacity: 1;
+}
+
+#menuLateral .sub
+{
+    color: #333;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#menuLateral .sub:hover
+{
+    color: #f60;
+}
+
+.nav-item{
+    position:  relative;
+}
+
+.nav-link[data-bs-toggle].collapsed:after {
+    font-family: bootstrap-icons; 
+    font-weight: 900; 
+    content: "\F279"; 
+    color:  #fff;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+.nav-link[data-bs-toggle]:not(.collapsed):after {
+    font-family: bootstrap-icons; 
+    font-weight: 900; 
+    content: "\F27C"; 
+    color:  #fff;
+    position: absolute;
+    right: 50px;
+    top: 20px;
+}
+
+header
+{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
+}
+
+#conteudo
+{
+    min-height: 88vh;
+}
+
+

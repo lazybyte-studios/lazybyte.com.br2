@@ -105,6 +105,19 @@
         </figure>
     </section>
 
+    <section class="slide">
+        <h2> Requisitos </h2>
+        <div class="columns two">
+            <ul>
+                <li> Site da empresa - one page </li>
+                <li> Painel protegido por senha </li>
+                <li> acesso à APIS gratuitas </li>
+                <li> Uso do Bootstrap </li>
+                <li> FlexBox responsivo </li>
+            </ul>
+        </div>
+    </section>
+
     <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Sistema de Usuários</h2>
     </section>
@@ -125,7 +138,7 @@
                 left to right direction
                 actor Usuario as usu
 
-                package Autentica&cedil;&atilde;o {
+                package Autentica&ccedil;&atilde;o {
                     usecase "Cadastrar-se" as UC1
                     usecase "Realizar Login" as UC2
                     usecase "Manter Cadastro" as UC3
@@ -145,7 +158,7 @@
                 package Navega&ccedil;&atilde;o {
                     usecase "Dashboard" as UC1
                     usecase "Usuarios" as UC2
-                    usecase "Cadastrar \n Editar|Excluir" as UC3
+                    usecase "Cadastrar \n Editar|Excluir \n -&gt;login.blade.php" as UC3
                 }
 
                 UC1 --> UC2 : Listar todos
@@ -155,21 +168,56 @@
         </div>
     </section>
 
-    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
-        <h2 style="color: #fff;"> Controle de Estoque </h2>
+    <section class="slide">
+        <h2> Rotas </h2>
+        <div class="columns two">
+            <ul style="font-size: 0.9rem; width: 120%;">
+                <li>
+                    As rotas definem o que deve ser entregue ou disparado aquando um determinado endereço e verbo for chamado.
+                </li>
+                <br>
+                <li>
+                    Existem diversos de tipos de rotas que podem ser definidas.
+                </li>
+                <br>
+                <li>
+                    As rotas são definidas na pasta "routes" no arquivo web.php <br> (para as rotas do site)
+                </li>
+                <br>
+                <li>
+                    As rotas podem entregar arquivos (views, etc), executar códigos diretamente ou ainda chamar funções das controllers.
+                </li>
+            </ul>
+            <pre style="margin-top: -90px; font-size:0.6rem;  " class="hljs mb-0 block min-h-full overflow-auto">
+            <code class="language-php ">
+                    &lt;?php
+
+                        # importação das classes de dependências
+                        use Illuminate\Support\Facades\Route;
+
+                        # rota da home retornando o arquivo views\home.blade.php
+                        Route::get("/", function(){
+                            return view("home");
+                        }) -> name("inicio");
+
+                        # rota do painel de controle
+                        Route::get("/login", function(){
+                            return view("login");
+                        }) -> name("painel");
+            </code>
+            <code class="language-bash">
+                    # no terminal
+                    php artisan serve
+
+                    # Criando as chaves criptográficas
+                    php artisan key:generate
+            </code>
+            </pre>
+        </div>
     </section>
 
-    <section class="slide">
-        <h2> Requisitos </h2>
-        <div class="columns two">
-            <ul>
-                <li> Site da empresa - one page </li>
-                <li> Painel protegido por senha </li>
-                <li> acesso à APIS gratuitas </li>
-                <li> Uso do Bootstrap </li>
-                <li> FlexBox responsivo </li>
-            </ul>
-        </div>
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
+        <h2 style="color: #fff;"> Controle de Estoque </h2>
     </section>
 
     <section class="slide">
@@ -192,15 +240,7 @@
         <h2 style="color: #fff;"> Wireframe Layout </h2>
     </section>
 
-    <section class="slide">
-        <h2> Requisitos Funcionais </h2>
-        <div class="columns two">
-            <ul>
-                <li>Uso do bootstrap</li>
-                <li>FlexBox responsivo</li>
-            </ul>
-        </div>
-    </section>
+    
 
     <section class="slide" style="background: url(https://www.cloudways.com/blog/wp-content/uploads/Main.jpg) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;"> Laravel Routes </h2>
@@ -297,49 +337,6 @@
                         #chama a rota pelo nome
                         return redirect()->route("noticias") ;
                     });
-            </code>
-            </pre>
-        </div>
-    </section>
-
-    <section class="slide">
-        <h2> Rotas </h2>
-        <div class="columns two">
-            <ul style="font-size: 0.9rem; width: 120%;">
-                <li>
-                    As rotas definem o que deve ser entregue ou disparado aquando um determinado endereço e verbo for chamado.
-                </li>
-                <br>
-                <li>
-                    Existem diversos de tipos de rotas que podem ser definidas.
-                </li>
-                <br>
-                <li>
-                    As rotas são definidas na pasta "routes" no arquivo web.php <br> (para as rotas do site)
-                </li>
-                <br>
-                <li>
-                    As rotas podem entregar arquivos (views, etc), executar códigos diretamente ou ainda chamar funções das controllers.
-                </li>
-            </ul>
-            <pre style="margin-top: -90px; font-size:0.6rem;  " class="hljs mb-0 block min-h-full overflow-auto">
-            <code class="language-php ">
-                    &lt;?php
-
-                        # importação das classes de dependências
-                        use Illuminate\Support\Facades\Route;
-
-                        # rota retornando o arquivo views\home.blade.php
-                        Route::get("/", function(){
-                            return view("home");
-                        });
-            </code>
-            <code class="language-bash">
-                    # no terminal
-                    php artisan serve
-
-                    # Criando as chaves criptográficas
-                    php artisan key:generate
             </code>
             </pre>
         </div>
