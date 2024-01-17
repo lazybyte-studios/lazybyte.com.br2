@@ -15,14 +15,16 @@
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
         <script src="{{ asset('js/bs/bootstrap.bundle.min.js') }}" defer ></script>
+
+        <script src="{{ asset('js/admin.js') }}" defer ></script>
     
     </head>
 
-    <body>
+    <body >
 
         <main class="container-fluid p-0">
 
-            <ul class="navbar-nav bg-secondary col-md-2 bg-gradient-primary sidebar sidebar-dark accordion  " id="menuLateral" >
+            <ul class="navbar-nav bg-secondary col-md-2 bg-gradient-primary sidebar sidebar-dark accordion toggled  " id="menuLateral" >
                 
                 <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                     <div class="sidebar-brand-icon rotate-n-15">
@@ -56,48 +58,40 @@
                     </div>
                 </li>
 
-                <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4 " data-bs-toggle="collapse" href="#menuLateral" role="button" aria-expanded="false" aria-controls="menuLateral" ><i class="bi bi-arrow-left-circle h3 text-white"></i></a>
+                <a class="sidebar-brand d-flex align-items-center justify-content-center mt-4 " onclick="esconde()" ><i class="bi bi-arrow-left-circle h3 text-white" style="cursor: pointer;" ></i></a>
 
             </ul>
 
             <section class="d-flex flex-column" >
 
-                <header class="bg-white p-3 ">
-                                        
+                <header class="bg-white p-3 " >
+
+                    <ul class="navbar-nav d-flex flex-row justify-content-end " id="itens">
+
+                        <li class="nav-item col-1">
+
+                            <a class="nav-link collapsed" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2" >
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle col-3" src="https://placehold.co/500x500">
+                            </a>
+
+                            <div id="collapseExample2" class="collapse col-md-12 mx-auto position-absolute" aria-labelledby="headingTwo" data-parent="#itens">
+                                <div class="bg-white py-3 rounded-2">
+                                    <a class="sub" href="#">Buttons</a>
+                                    <hr class="my-0">
+                                    <a class="sub" href="#">Cards</a>
+                                </div>
+                            </div>
+
+                        </li>
+
+                    
+                    </ul>                                       
                 </header>
 
                 <section id="conteudo" class="container-fluid p-5">
 
-                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Cards</h1>
-                    </div>
-
-                    <div class="col-xl-3 col-md-6 mb-4" style="border-left: 0.25rem solid #36b9cc; border-radius: 10px;" >
-                        <div class="card shadow h-100 py-2">
-                            <div class="card-body">
-                                <div class="row no-gutters align-items-center">
-                                    <div class="col mr-2">
-                                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tarefas
-                                        </div>
-                                        <div class="row no-gutters align-items-center">
-                                            <div class="col-auto">
-                                                <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="progress progress-sm mr-2">
-                                                    <div class="progress-bar bg-info" role="progressbar"
-                                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0"
-                                                        aria-valuemax="100"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                    <i class="bi bi-clipboard-check-fill h2 text-black-50"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>                    
+                    @yield('conteudo')                    
 
                 </section>
 

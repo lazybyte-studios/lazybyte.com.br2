@@ -19,9 +19,10 @@ body
     float: left;
 }
 
-#menuLateral.toggled
+#menuLateral.collapse.show
 {
     width: 6.5rem;
+    transition: width 0.3s ease-in-out;
 }
 
 #menuLateral li > a
@@ -89,9 +90,17 @@ header
     box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15);
 }
 
+#collapseExample2 .sub
+{
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
 #conteudo
 {
-    min-height: 88vh;
+    min-height: 85vh;
 }
 
 
