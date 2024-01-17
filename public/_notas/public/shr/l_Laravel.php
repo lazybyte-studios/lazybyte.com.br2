@@ -106,28 +106,11 @@
     </section>
 
     <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
-        <h2 style="color: #fff;"> Controle de Estoque </h2>
-    </section>
-
-    <section class="slide">
-        <h2> Requisitos </h2>
-        <div class="columns two">
-            <ul>
-                <li> Site da empresa - one page </li>
-                <li> Painel protegido por senha </li>
-                <li> acesso à APIS gratuitas </li>
-                <li> Uso do Bootstrap </li>
-                <li> FlexBox responsivo </li>
-            </ul>
-        </div>
-    </section>
-
-    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;">Sistema de Usuários</h2>
     </section>
 
     <section class="slide">
-        <h2> Casos de Uso | Mapa do site </h2>
+        <h2> Caso de Uso | Mapa do site </h2>
 
         <style>
             .uml img
@@ -142,7 +125,7 @@
                 left to right direction
                 actor Usuario as usu
 
-                package Web {
+                package Autentica&cedil;&atilde;o {
                     usecase "Cadastrar-se" as UC1
                     usecase "Realizar Login" as UC2
                     usecase "Manter Cadastro" as UC3
@@ -169,6 +152,23 @@
                 UC1 --> UC3
 
             </uml>
+        </div>
+    </section>
+
+    <section class="slide" style="background: url(https://lh3.google.com/u/0/d/1_vFF1hgm62UABHJC9ECmFGMD2gWoq9M1) no-repeat; background-size: cover;" >
+        <h2 style="color: #fff;"> Controle de Estoque </h2>
+    </section>
+
+    <section class="slide">
+        <h2> Requisitos </h2>
+        <div class="columns two">
+            <ul>
+                <li> Site da empresa - one page </li>
+                <li> Painel protegido por senha </li>
+                <li> acesso à APIS gratuitas </li>
+                <li> Uso do Bootstrap </li>
+                <li> FlexBox responsivo </li>
+            </ul>
         </div>
     </section>
 
