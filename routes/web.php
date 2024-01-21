@@ -15,15 +15,20 @@ Route::get("/notas", function(){
 })->name("notas");
 
 
-Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
+// Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
 
-    Route::get('/', function(){
-        return view( "sistema/index" );
-    })-> name("painel");
+//     Route::get('/', function( ){
+//         return view( "sistema/index" );
+//     })-> name("painel");
 
-    Route::get('/login/', function(){
-        return view( "sistema/index",  [ "operacao" => 'login' ] );
-    })-> name("login");
+//     # enviando diretamente sem usar a controller
+//     Route::get('/usuarios/{op?}', function( $op = null ){
+//         return view( "sistema/usuarios",  [ "op" => $op ] );
+//     })->name("usuarios")-> name("usuarios");
 
-    //Route::get('/', [NotaController::class, 'index'])->name('index');
-});
+// });
+
+# enviando parâmetro através da rota
+# Route::get('/produto/{id?}', [ProdutoController::class, 'show'])->name('produto.show');
+
+
