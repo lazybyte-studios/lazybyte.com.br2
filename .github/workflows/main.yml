@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - main
+      - wireframe
     paths-ignore:
       - '_Docs/**'
       - '.env'
