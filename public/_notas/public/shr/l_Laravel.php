@@ -78,6 +78,7 @@
                 <li style="background: #555; padding: 10px 20px; list-style-type: none; color: #fff; font-size: 0.65rem; border-radius: 5px;">
                     composer create-project laravel/laravel nome-do-projeto <br>
                     composer create-project --prefer-dist laravel/laravel:^7.0 nome-do-projeto
+                    composer install --ignore-platform-reqs
                 </li><br>
                 <li class="next">
                     O Laravel cria um servidor virtual (virtual host) para o seu projeto. O artisan permite usar vários comandos via linha de comando. Ele pode ser chamado com o comando abaixo:
@@ -240,7 +241,7 @@
         <h2 style="color: #fff;"> Wireframe Layout </h2>
     </section>
 
-    
+
 
     <section class="slide" style="background: url(https://www.cloudways.com/blog/wp-content/uploads/Main.jpg) no-repeat; background-size: cover;" >
         <h2 style="color: #fff;"> Laravel Routes </h2>
