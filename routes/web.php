@@ -10,18 +10,18 @@ Route::get("/", function(){
 
 # redireciona para uma pasta
 Route::get("/notas", function(){
-    return redirect("_notas");
-    # return redirect()->route('inicio'); 
+    return redirect("https://notas.lazybyte.com.br");
+    # return redirect()->route('inicio');
 })->name("notas");
 
 
 Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
-    
-    Route::get('/', function(){ 
+
+    Route::get('/', function(){
         return view( "sistema/index" );
     })-> name("painel");
 
-    Route::get('/login/', function(){ 
+    Route::get('/login/', function(){
         return view( "sistema/index",  [ "operacao" => 'login' ] );
     })-> name("login");
 
