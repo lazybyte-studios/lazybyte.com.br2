@@ -15,18 +15,22 @@ Route::get("/notas", function(){
 })->name("notas");
 
 
-// Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
+Route::group([ 'prefix' => 'sistema', 'as' => 'sistema.'], function(){
 
-//     Route::get('/', function( ){
-//         return view( "sistema/index" );
-//     })-> name("painel");
+    Route::get('/', function( ){
+        return view( "sistema/index",[ 'tema' => 1 ] );
+    })-> name("index");
 
-//     # enviando diretamente sem usar a controller
-//     Route::get('/usuarios/{op?}', function( $op = null ){
-//         return view( "sistema/usuarios",  [ "op" => $op ] );
-//     })->name("usuarios")-> name("usuarios");
+    Route::get('/painel', function( ){
+        return view( "sistema/index",[ 'tema' => 0 ] );
+    })-> name("painel");
 
-// });
+    # enviando diretamente sem usar a controller
+    Route::get('painel/usuarios/{op?}', function( $op = null ){
+        return view( "sistema/usuarios",  [ "op" => $op ] );
+    })->name("usuarios")-> name("usuarios");
+
+});
 
 # enviando parâmetro através da rota
 # Route::get('/produto/{id?}', [ProdutoController::class, 'show'])->name('produto.show');

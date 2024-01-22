@@ -19,10 +19,10 @@
         <style>
             :root
             {
-                --cor-fundo: #eee; 
-                --cor-fundoEscuro: #292825; 
+                --cor-fundo: #eee;
+                --cor-fundoEscuro: #292825;
                 --hover: #f1d204;
-                
+
             }
 
             .escuro:root
@@ -44,13 +44,13 @@
                 background: var( --cor-fundo );
             }
 
-            #menu 
+            #menu
             {
                 padding-top: 20px;
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: calc( 100vw - 17px );
+                width: calc( 100vw - 20px );
                 transition: all 0.3s ease-in-out;
                 z-index: 1000;
             }
@@ -323,7 +323,7 @@
 
             @keyframes zoom-a
             {
-                0% 
+                0%
                 {
                     background-size: 110% auto;
                 }
@@ -335,7 +335,7 @@
                 {
                     background-size: 100% auto;
                 }
-            
+
             }
 
             .dropdown
@@ -357,12 +357,12 @@
                 list-style-type: none;
             }
 
-            .dropdown:hover ul 
+            .dropdown:hover ul
             {
                 display: block;
             }
 
-            #myBtn 
+            #myBtn
             {
                 display: none; /* Hidden by default */
                 position: fixed; /* Fixed/sticky position */
@@ -379,7 +379,7 @@
                 font-size: 18px; /* Increase font size */
             }
 
-            #myBtn:hover 
+            #myBtn:hover
             {
                 background-color: #555; /* Add a dark-grey background on hover */
             }
@@ -400,15 +400,15 @@
                 object-fit: cover;
             }
 
-            #portfolio > div figure:nth-child( 1 ) 
+            #portfolio > div figure:nth-child( 1 )
             {
                 grid-column-start: 1;
                 grid-column-end: 3;
                 grid-row-start: 1;
                 grid-row-end: 3;
             }
-            
-            #portfolio > div figure:nth-child( 2 ) 
+
+            #portfolio > div figure:nth-child( 2 )
             {
                 grid-column-start: 3;
                 grid-column-end: 5;
@@ -416,7 +416,7 @@
                 grid-row-end: 3;
             }
 
-            #portfolio > div figure:nth-child( 3 ) 
+            #portfolio > div figure:nth-child( 3 )
             {
                 grid-column-start: 5;
                 grid-column-end: 9;
@@ -424,7 +424,7 @@
                 grid-row-end: 6;
             }
 
-            #portfolio > div figure:nth-child( 4 ) 
+            #portfolio > div figure:nth-child( 4 )
             {
                 grid-column-start: 1;
                 grid-column-end: 5;
@@ -432,7 +432,7 @@
                 grid-row-end: 6;
             }
 
-            #portfolio > div figure:nth-child( 5 ) 
+            #portfolio > div figure:nth-child( 5 )
             {
                 grid-column-start: 1;
                 grid-column-end: 4;
@@ -440,7 +440,7 @@
                 grid-row-end: 8;
             }
 
-            #portfolio > div figure:nth-child( 6 ) 
+            #portfolio > div figure:nth-child( 6 )
             {
                 grid-column-start: 4;
                 grid-column-end: 9;
@@ -451,6 +451,7 @@
             footer
             {
                 height: 40vh;
+                width: 100%;
                 display: flex;
                 justify-content: flex-end;
                 flex-direction: column;
@@ -480,8 +481,8 @@
                         <a href="#servicos"> Serviços </a>
                         <a href="#contato"> Contato </a>
                         <a href="#blog"> Blog </a>
-                        <a href="#" class="dropdown" > 
-                            Tecnologias  
+                        <a href="#" class="dropdown" >
+                            Tecnologias
                             <ul>
                                 <li>HTML</li>
                                 <li>CSS</li>
@@ -612,7 +613,7 @@
 
         </section>
 
-        @yield('content')
+        @yield('conteudos')
 
         <footer id="footer" >
             <div class="container">
@@ -621,7 +622,7 @@
                         <div id="text-5" class="widget widget_text">
                             <div class="widget-title">
                                 <h5 style="color: #fff;" >PRODUCTS</h5>
-                            </div> 
+                            </div>
                             <div class="textwidget">
                                 <ul>
                                     <li><a href="#" title="Our work">Our work</a></li>
@@ -630,7 +631,7 @@
                                     <li><a href="#" title="Announcement">Announcement</a></li>
                                 </ul>
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
 
@@ -654,16 +655,16 @@
             let nav = document.querySelector("#menu");
 
             // When the user scrolls down 20px from the top of the document, show the button
-            window.onscroll = function() 
+            window.onscroll = function()
             {
-    
+
                 // Botão para o topo
-               
-                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) 
+
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20)
                 {
                     mybutton.style.display = "block";
-                } 
-                else 
+                }
+                else
                 {
                     mybutton.style.display = "none";
                 }
@@ -679,9 +680,9 @@
                     nav.classList.remove("fixa");
                 }
 
-                // sinalizando o item do menu de acordo com a posição do scroll 
+                // sinalizando o item do menu de acordo com a posição do scroll
                 let sections = document.querySelectorAll("section");
-                
+
                 sections.forEach( sec =>{
                     let top = window.scrollY;
                     let offset = sec.offsetTop;
@@ -703,7 +704,7 @@
             }
 
             // When the user clicks on the button, scroll to the top of the document
-            function topFunction() 
+            function topFunction()
             {
                 document.body.scrollTop = 0; // For Safari
                 document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -713,13 +714,13 @@
             {
                 let allElements = document.querySelectorAll(".ativo");
                 for(i=0; i<allElements.length; i++)
-                { 
+                {
                     allElements[i].classList.remove('ativo');
                 }
             }
 
-            
-                     
+
+
         </script>
 
     </body>

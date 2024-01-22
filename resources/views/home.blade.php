@@ -6,6 +6,6 @@
 
 ?>
 
-@section('content')
+@section('conteudo')
 
 @endsection

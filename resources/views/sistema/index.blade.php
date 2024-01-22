@@ -1,4 +1,4 @@
-@extends( '_temas.dashboard' )
+@extends ( $tema == 1  ? '_temas/wireframe' : '_temas.dashboard' )
 
 <?php
     $idioma = "pt-br";
