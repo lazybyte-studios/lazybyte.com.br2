@@ -42,16 +42,19 @@ const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
 const logo = document.querySelector("#logo");
 
-window.addEventListener("scroll", function() 
+window.addEventListener("scroll", function()
 {
-  if (window.scrollY >= 200) {
-    header.classList.add("active");
-    backTopBtn.classList.add("active");
-    logo.setAttribute("style", "width: 6.5%; top: 0vw; left: 3.5vw;");
-  } else {
-    header.classList.remove("active");
-    backTopBtn.classList.remove("active");
-    logo.setAttribute("style", "width:10%; top: -2.5vw; left: 2.5vw;");
-  }
+    if ( window.innerWidth >= 1600 )
+    {
+        if (window.scrollY >= 200) {
+            header.classList.add("active");
+            backTopBtn.classList.add("active");
+                logo.setAttribute("style", "width: 6.5%; top: 0vw; left: 3.5vw;");
+        } else {
+            header.classList.remove("active");
+            backTopBtn.classList.remove("active");
+            logo.setAttribute("style", "width: 8%; top: -1.6vw; left: 2.5vw;");
+        }
+    }
 });
 

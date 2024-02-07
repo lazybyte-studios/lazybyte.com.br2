@@ -37,7 +37,10 @@
     <div id="progstat"></div>
     <div id="progress"></div>
   </div>
-
+{{--
+    https://codepen.io/FilipVitas/pen/KRRRoY
+    https://codepen.io/Ahmed_B_Hameed/pen/LZqNmp
+--}}
   <header class="header">
 
     <div class="header-top">
@@ -88,7 +91,7 @@
 
       <div class="container">
 
-        <h1 id="logo" class="position-relative" > 
+        <h1 id="logo" class="position-relative" >
           <object type="image/svg+xml" data="{{asset('imagens/lazy_logo.svg')}}" ></object>
         </h1>
 
@@ -104,7 +107,7 @@
 
         <div class="header-actions">
 
-          <button class="search-btn" aria-label="open search" data-search-toggler>
+          <button class="search-btn" aria-label="open search" data-search-toggler title="Pesquisar no site" >
             <ion-icon name="search-outline"></ion-icon>
           </button>
 
@@ -123,7 +126,7 @@
   <div class="search-container" data-search-box>
 
     <div class="input-wrapper">
-      <input type="search" name="search" aria-label="search" placeholder="Search here..." class="search-field">
+      <input type="search" name="search" aria-label="search" placeholder="Pesquise aqui..." class="search-field">
 
       <button class="search-submit" aria-label="submit search" data-search-toggler>
         <ion-icon name="search-outline"></ion-icon>
