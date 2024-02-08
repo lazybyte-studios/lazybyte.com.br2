@@ -122,7 +122,7 @@
     </div>
 
   </header>
-
+{{--
   <div class="search-container" data-search-box>
 
     <div class="input-wrapper">
@@ -1056,7 +1056,7 @@
   </footer>
 
 
-
+--}}
 
 
   <!--
